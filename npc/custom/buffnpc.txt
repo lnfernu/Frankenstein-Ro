@@ -1,0 +1,42 @@
+prontera,146,103,5	script	Heal and Buff	677,{
+
+percentheal 100,100;
+//skilleffect 384,0; sc_start SC_MELTDOWN,3600000,5;
+//skilleffect 383,0; sc_start SC_WINDWALK,3600000,5;
+//skilleffect 378,0; sc_start SC_EDP,3600000,5;
+//skilleffect 465,0; sc_start SC_KAITE,3600000,7;
+//skilleffect 464,0; sc_start SC_KAUPE,3600000,3;
+//skilleffect 463,0; sc_start SC_KAAHI,3600000,7;
+//skilleffect 462,0; sc_start SC_KAIZEL,3600000,7;
+//skilleffect 8,0; sc_start SC_ENDURE,3600000,10;
+//skilleffect 33,0; sc_start SC_ANGELUS,3600000,10;
+//skilleffect 45,0; sc_start SC_CONCENTRATE,3600000,10;
+//skilleffect 74,0; sc_start SC_MAGNIFICAT,3600000,5;
+//skilleffect 75,0; sc_start SC_GLORIA,3600000,5;
+//skilleffect 459,0; sc_start SC_ADRENALINE2,3600000,1;
+skilleffect 66,0; sc_start SC_IMPOSITIO,3600000,5;
+//skilleffect 67,0; sc_start SC_SUFFRAGIUM,3600000,3;
+skilleffect 34,0; sc_start SC_BLESSING,3600000,10;
+skilleffect 29,0; sc_start SC_INCREASEAGI,3600000,10;
+//skilleffect 112,0; sc_start SC_WEAPONPERFECTION,3600000,10;
+//skilleffect 113,0; sc_start SC_OVERTHRUST,3600000,5;
+//skilleffect 114,0; sc_start SC_MAXIMIZEPOWER,3600000,5;
+//skilleffect 357,0; sc_start SC_CONCENTRATION,3600000,5;
+//skilleffect 355,0; sc_start SC_AURABLADE,3600000,5;
+//skilleffect 155,0; sc_start SC_LOUD,3600000,1;
+//skilleffect 157,0; sc_start SC_ENERGYCOAT,3600000,1;
+sc_start SC_ASPDPOTION2,3600000,0;
+sc_start SC_STRFood,3600000,10;
+sc_start SC_AGIFood,3600000,10;
+sc_start SC_VITFood,3600000,10;
+sc_start SC_INTFood,3600000,10;
+sc_start SC_DEXFood,3600000,10;
+sc_start SC_LUKFood,3600000,10;
+sc_start SC_HitFood,3600000,30;
+sc_start SC_FleeFood,3600000,30;
+sc_start SC_BATKFood,3600000,10;
+sc_start SC_MATKFood,3600000,10;
+//skilleffect 380,0; sc_start SC_TRUESIGHT,3600000,5;
+skilleffect 361,0; sc_start SC_ASSUMPTIO,3600000,5;
+close;
+}

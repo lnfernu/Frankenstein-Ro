@@ -1,0 +1,20 @@
+-	script	DayNightCycle15Menit	-1,{
+    
+    OnInit:
+        set $is_night, 0;
+        initnpctimer;
+        end;
+
+    OnTimer1800000: // 30 menit
+        if ($is_night == 0) {
+            atcommand "@night";
+            set $is_night, 1;
+            announce "-.-.", bc_all;
+        } else {
+            atcommand "@day";
+            set $is_night, 0;
+            announce "-_-", bc_all;
+        }
+        initnpctimer;
+        end;
+}

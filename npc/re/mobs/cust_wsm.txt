@@ -1,0 +1,290 @@
+//===== rAthena Script =======================================
+//= Custom Monster
+//===== By: ==================================================
+//= Master WSM
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Spawns Custom Monster in towns and fields
+//===== Additional Comments: =================================
+//= 1.0 First version, Renewal spawns.
+//============================================================
+
+//============================================================================================================================================================
+// Field
+//============================================================================================================================================================
+prt_fild08,0,0	monster	Anya	20022,200,5000,0,0,0,1 //novice
+prt_fild08,0,0	monster	Cenia	20024,80,5000,0,0,0,1 //swordman
+
+moc_fild12,0,0	monster	Anya	20022,10,5000,0,0,0,1 //novice
+moc_fild12,0,0	monster	Cenia	20024,10,5000,0,0,0,1 //swordman
+
+moc_fild18,0,0	monster	Anya	20022,10,5000,0,0,0,1 //novice
+moc_fild18,0,0	monster	Cenia	20024,10,5000,0,0,0,1 //swordman
+moc_fild18,0,0	monster	Nano	2551,10,5000,0,0,0,1 //thief
+moc_fild18,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+
+moc_fild17,0,0	monster	Nissan	2553,10,5000,0,0,0,1 //Assassin
+moc_fild17,0,0	monster	Licheniyes	2559,10,5000,0,0,0,1 //priest
+moc_fild17,0,0	monster	Cenia	20024,10,5000,0,0,0,1 //swordman
+moc_fild17,0,0	monster	Nano	2551,10,5000,0,0,0,1 //thief
+moc_fild17,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+
+prt_fild07,0,0	monster	Anya	20022,20,5000,0,0,0,1 //novice
+prt_fild07,0,0	monster	Cenia	20024,10,5000,0,0,0,1 //swordman
+prt_fild07,0,0	monster	Nano	2551,10,5000,0,0,0,1 //thief
+prt_fild07,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+
+ygg_roots,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+ygg_roots,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+ygg_roots,0,0	monster	Doom	20827,10,5000,0,0,0,1 //SChaser
+
+mu_fild01,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+mu_fild01,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+mu_fild01,0,0	monster	Doom	20827,10,5000,0,0,0,1 //SChaser
+mu_fild01,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+
+gef_fild05,0,0	monster	Rainee	20035,20,5000,0,0,0,1 //mage
+gef_fild05,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+
+gef_fild06,0,0	monster	Rainee	20035,20,5000,0,0,0,1 //mage
+gef_fild06,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+
+gef_fild07,0,0	monster	Rainee	20035,20,5000,0,0,0,1 //mage
+gef_fild07,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+
+//============================================================================================================================================================
+// Dungeon
+//============================================================================================================================================================
+iz_dun01,0,0	monster	Cenia	20024,20,5000,0,0,0,1 //swordman
+iz_dun02,0,0	monster	Nano	2551,20,5000,0,0,0,1 //thief
+iz_dun02,0,0	monster	Lando	20021,20,5000,0,0,0,1 //Acolyte
+iz_dun03,0,0	monster	Cenia	20024,20,5000,0,0,0,1 //swordman
+iz_dun03,0,0	monster	Nano	2551,20,5000,0,0,0,1 //thief
+iz_dun03,0,0	monster	Lando	20021,20,5000,0,0,0,1 //Acolyte
+iz_dun04,0,0	monster	Cenia	20024,20,5000,0,0,0,1 //swordman
+iz_dun04,0,0	monster	Nano	2551,20,5000,0,0,0,1 //thief
+iz_dun04,0,0	monster	Lando	20021,20,5000,0,0,0,1 //Acolyte
+iz_dun05,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+iz_dun05,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+iz_dun05,0,0	monster	Doom	20827,10,5000,0,0,0,1 //SChaser
+iz_dun05,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+
+moc_pryd04,0,0	monster	Nissan	2553,10,5000,0,0,0,1 //Assassin
+moc_pryd04,0,0	monster	Nano	2551,10,5000,0,0,0,1 //thief
+moc_pryd04,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+moc_pryd04,0,0	monster	Cenia	20024,10,5000,0,0,0,1 //swordman
+moc_pryd05,0,0	monster	Nissan	2553,10,5000,0,0,0,1 //Assassin
+moc_pryd05,0,0	monster	Licheniyes	2559,10,5000,0,0,0,1 //priest
+
+pay_dun00,0,0	monster	Cenia	20024,6,5000,0,0,0,1 //swordman
+pay_dun00,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+pay_dun00,0,0	monster	Hex Boy	22674,10,5000,0,0,0,1 //Archer boy
+pay_dun01,0,0	monster	Cenia	20024,6,5000,0,0,0,1 //swordman
+pay_dun01,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+pay_dun01,0,0	monster	Hex Boy	22674,10,5000,0,0,0,1 //Archer boy
+pay_dun02,0,0	monster	Cenia	20024,6,5000,0,0,0,1 //swordman
+pay_dun02,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+pay_dun02,0,0	monster	Hex Boy	22674,10,5000,0,0,0,1 //Archer boy
+pay_dun03,0,0	monster	Cenia	20024,6,5000,0,0,0,1 //swordman
+pay_dun03,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+pay_dun03,0,0	monster	Hex Boy	22674,10,5000,0,0,0,1 //Archer boy
+
+uknw_ruin,0,0	monster	Knight Arms	20826,5,5000,0,0,0,1 //rk
+uknw_ruin,0,0	monster	Knight Devotion	20825,5,5000,0,0,0,1 //ig
+uknw_ruin,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+uknw_ruin,0,0	monster	Doom	20827,5,5000,0,0,0,1 //SChaser
+
+uknw_ruin2,0,0	monster	Knight Arms	20826,5,5000,0,0,0,1 //rk
+uknw_ruin2,0,0	monster	Knight Devotion	20825,5,5000,0,0,0,1 //ig
+uknw_ruin2,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+uknw_ruin2,0,0	monster	Doom	20827,5,5000,0,0,0,1 //SChaser
+
+
+gl_knt01,0,0	monster	Seyren	20031,10,5000,0,0,0,1 //knight
+gl_knt01,0,0	monster	Eremes	20032,15,5000,0,0,0,1 //assassin
+gl_knt01,0,0	monster	Howard	20033,10,5000,0,0,0,1 //blacksmith
+gl_knt01,0,0	monster	Cecil	20034,10,5000,0,0,0,1 //hunter
+
+//============================================================================================================================================================
+// Cities
+//============================================================================================================================================================
+prontera,0,0	monster	Anya	20022,80,5000,0,0,0,1 //novice
+prontera,0,0	monster	Alex	20023,80,5000,0,0,0,1 //novice
+prontera,0,0	monster	Cenia	20024,80,5000,0,0,0,1 //swordgirl
+prontera,0,0	monster	Ifodes	2558,30,5000,0,0,0,1 //lord knight
+prontera,0,0	monster	Blut Hase	2556,30,5000,0,0,0,1 //paladin
+prontera,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+prontera,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+prontera,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+prontera,0,0	monster	Lando	20021,50,5000,0,0,0,1 //Acolyte
+prontera,0,0	monster	Faymont	2554,50,5000,0,0,0,1 //Acolyte
+prontera,0,0	monster	Licheniyes	2559,50,5000,0,0,0,1 //priest
+prontera,0,0	monster	Seyren	20031,30,5000,0,0,0,1 //knight
+prontera,0,0	monster	Eremes	20032,30,5000,0,0,0,1 //assassin
+prontera,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+prontera,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+
+izlude,0,0	monster	Cenia	20024,10,5000,0,0,0,1 //swordgirl
+izlude,0,0	monster	Anya	20022,20,5000,0,0,0,1 //novice
+izlude,0,0	monster	Alex	20023,20,5000,0,0,0,1 //novice
+izlude,0,0	monster	Ifodes	2558,10,5000,0,0,0,1 //knight
+izlude,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+izlude,0,0	monster	Nano	2551,10,5000,0,0,0,1 //thief
+izlude,0,0	monster	Seyren	20031,10,5000,0,0,0,1 //knight
+izlude,0,0	monster	Eremes	20032,10,5000,0,0,0,1 //assassin
+izlude,0,0	monster	Howard	20033,10,5000,0,0,0,1 //blacksmith
+izlude,0,0	monster	Cecil	20034,10,5000,0,0,0,1 //hunter
+
+caspen,0,0	monster	Cenia	20024,10,5000,0,0,0,1 //swordgirl
+caspen,0,0	monster	Anya	20022,20,5000,0,0,0,1 //novice
+caspen,0,0	monster	Alex	20023,20,5000,0,0,0,1 //novice
+caspen,0,0	monster	Ifodes	2558,10,5000,0,0,0,1 //knight
+caspen,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+caspen,0,0	monster	Nano	2551,10,5000,0,0,0,1 //thief
+caspen,0,0	monster	Seyren	20031,10,5000,0,0,0,1 //knight
+caspen,0,0	monster	Eremes	20032,10,5000,0,0,0,1 //assassin
+caspen,0,0	monster	Howard	20033,10,5000,0,0,0,1 //blacksmith
+caspen,0,0	monster	Cecil	20034,10,5000,0,0,0,1 //hunter
+
+morocc,0,0	monster	Doom	20827,10,5000,0,0,0,1 //SChaser
+morocc,0,0	monster	Anya	20022,80,5000,0,0,0,1 //novice
+morocc,0,0	monster	Alex	20023,80,5000,0,0,0,1 //novice
+morocc,0,0	monster	Lando	20021,50,5000,0,0,0,1 //Acolyte
+morocc,0,0	monster	Nano	2551,50,5000,0,0,0,1 //thief
+morocc,0,0	monster	Nissan	2553,50,5000,0,0,0,1 //Assassin
+morocc,0,0	monster	Seyren	20031,30,5000,0,0,0,1 //knight
+morocc,0,0	monster	Eremes	20032,30,5000,0,0,0,1 //assassin
+morocc,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+morocc,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+
+aldebaran,0,0	monster	Fay Kanavian	2563,30,5000,0,0,0,1 //alchemist
+aldebaran,0,0	monster	Ju	2561,20,5000,0,0,0,1 //sorverer
+aldebaran,0,0	monster	Dwigh	2562,20,5000,0,0,0,1 //sorcerer
+aldebaran,0,0	monster	Lando	20021,20,5000,0,0,0,1 //Acolyte
+aldebaran,0,0	monster	Bully	2552,20,5000,0,0,0,1 //blacksmith
+aldebaran,0,0	monster	Seyren	20031,20,5000,0,0,0,1 //knight
+aldebaran,0,0	monster	Eremes	20032,20,5000,0,0,0,1 //assassin
+aldebaran,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+aldebaran,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+
+alberta,0,0	monster	Bully	2552,50,5000,0,0,0,1 //blacksmith
+alberta,0,0	monster	Lando	20021,50,5000,0,0,0,1 //Acolyte
+alberta,0,0	monster	Cenia	20024,80,5000,0,0,0,1 //swordgirl
+alberta,0,0	monster	Anya	20022,80,5000,0,0,0,1 //novice
+alberta,0,0	monster	Alex	20023,80,5000,0,0,0,1 //novice
+alberta,0,0	monster	Seyren	20031,30,5000,0,0,0,1 //knight
+alberta,0,0	monster	Eremes	20032,30,5000,0,0,0,1 //assassin
+alberta,0,0	monster	Howard	20033,40,5000,0,0,0,1 //blacksmith
+alberta,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+
+jor_albe,0,0	monster	Bully	2552,10,5000,0,0,0,1 //blacksmith
+jor_albe,0,0	monster	Lando	20021,10,5000,0,0,0,1 //Acolyte
+jor_albe,0,0	monster	Cenia	20024,20,5000,0,0,0,1 //swordgirl
+jor_albe,0,0	monster	Seyren	20031,20,5000,0,0,0,1 //knight
+jor_albe,0,0	monster	Eremes	20032,20,5000,0,0,0,1 //assassin
+jor_albe,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+jor_albe,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+jor_albe,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+jor_albe,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+jor_albe,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+jor_albe,0,0	monster	Lego Kun	20030,50,5000,0,0,0,1 //guns
+
+geffen,0,0	monster	Lando	20021,40,5000,0,0,0,1 //Acolyte
+geffen,0,0	monster	Anya	20022,50,5000,0,0,0,1 //novice
+geffen,0,0	monster	Alex	20023,50,5000,0,0,0,1 //novice
+geffen,0,0	monster	Dio Anemos	2550,30,5000,0,0,0,1 //mage
+geffen,0,0	monster	Ordre	2555,50,5000,0,0,0,1 //wizard f
+geffen,0,0	monster	Seyren	20031,30,5000,0,0,0,1 //knight
+geffen,0,0	monster	Eremes	20032,30,5000,0,0,0,1 //assassin
+geffen,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+geffen,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+geffen,0,0	monster	Rainee	20035,50,5000,0,0,0,1 //mage
+
+comodo,0,0	monster	Lando	20021,40,5000,0,0,0,1 //Acolyte
+comodo,0,0	monster	Dio Anemos	2550,50,5000,0,0,0,1 //mage
+comodo,0,0	monster	Ordre	2555,50,5000,0,0,0,1 //wizard f
+comodo,0,0	monster	Seyren	20031,30,5000,0,0,0,1 //knight
+comodo,0,0	monster	Eremes	20032,30,5000,0,0,0,1 //assassin
+comodo,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+comodo,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+
+payon,0,0	monster	Icarus Chan	20030,50,5000,0,0,0,1 // archer
+payon,0,0	monster	Anya	20022,80,5000,0,0,0,1 // swordgirl
+payon,0,0	monster	Alex	20023,80,5000,0,0,0,1 // noviceboy
+payon,0,0	monster	Lando	20021,30,5000,0,0,0,1 // aco
+payon,0,0	monster	Seyren	20031,20,5000,0,0,0,1 //knight
+payon,0,0	monster	Eremes	20032,20,5000,0,0,0,1 //assassin
+payon,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+payon,0,0	monster	Cecil	20034,30,5000,0,0,0,1 //hunter
+
+einbroch,0,0	monster	Anya	20022,40,5000,0,0,0,1 //novice
+einbroch,0,0	monster	Alex	20023,40,5000,0,0,0,1 //novice
+einbroch,0,0	monster	Lego Kun	20030,60,5000,0,0,0,1 //guns
+einbroch,0,0	monster	Seyren	20031,30,5000,0,0,0,1 //knight
+einbroch,0,0	monster	Eremes	20032,30,5000,0,0,0,1 //assassin
+einbroch,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+einbroch,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+
+icecastle,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+icecastle,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+icecastle,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+icecastle,0,0	monster	Lego Kun	20030,50,5000,0,0,0,1 //guns
+
+verus04,0,0	monster	Seyren	20031,10,5000,0,0,0,1 //knight
+verus04,0,0	monster	Eremes	20032,10,5000,0,0,0,1 //assassin
+verus04,0,0	monster	Howard	20033,10,5000,0,0,0,1 //blacksmith
+verus04,0,0	monster	Cecil	20034,10,5000,0,0,0,1 //hunter
+verus04,0,0	monster	Lego Kun	20030,50,5000,0,0,0,1 //guns
+verus04,0,0	monster	Knight Arms	20826,5,5000,0,0,0,1 //rk
+verus04,0,0	monster	Knight Devotion	20825,5,5000,0,0,0,1 //ig
+verus04,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+verus04,0,0	monster	Doom	20827,5,5000,0,0,0,1 //SChaser
+
+yuno,0,0	monster	Lando	20021,40,5000,0,0,0,1 //Acolyte
+yuno,0,0	monster	Dio Anemos	2550,50,5000,0,0,0,1 //mage
+yuno,0,0	monster	Ordre	2555,50,5000,0,0,0,1 //wizard f
+yuno,0,0	monster	Seyren	20031,30,5000,0,0,0,1 //knight
+yuno,0,0	monster	Bully	2552,50,5000,0,0,0,1 //blacksmith
+yuno,0,0	monster	Ifodes	2558,30,5000,0,0,0,1 //lord knight
+yuno,0,0	monster	Lego Kun	20030,50,5000,0,0,0,1 //guns
+yuno,0,0	monster	Eremes	20032,30,5000,0,0,0,1 //assassin
+yuno,0,0	monster	Howard	20033,20,5000,0,0,0,1 //blacksmith
+yuno,0,0	monster	Cecil	20034,20,5000,0,0,0,1 //hunter
+
+ch1_geffen,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+ch1_geffen,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+ch1_geffen,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+ch1_geffen,0,0	monster	Doom	20827,10,5000,0,0,0,1 //SChaser
+ch1_geffen,0,0	monster	Lego Kun	20030,5,5000,0,0,0,1 //guns
+ch1_geffen,0,0	monster	Seyren	20031,10,5000,0,0,0,1 //knight
+ch1_geffen,0,0	monster	Eremes	20032,10,5000,0,0,0,1 //assassin
+ch1_geffen,0,0	monster	Howard	20033,10,5000,0,0,0,1 //blacksmith
+ch1_geffen,0,0	monster	Cecil	20034,10,5000,0,0,0,1 //hunter
+
+ygg_edge,0,0	monster	Knight Arms	20826,10,5000,0,0,0,1 //rk
+ygg_edge,0,0	monster	Knight Devotion	20825,10,5000,0,0,0,1 //ig
+ygg_edge,0,0	monster	Commander Knight	20823,1,5000,0,0,0,1 //rk
+ygg_edge,0,0	monster	Doom	20827,10,5000,0,0,0,1 //SChaser
+ygg_edge,0,0	monster	Lego Kun	20030,5,5000,0,0,0,1 //guns
+ygg_edge,0,0	monster	Seyren	20031,10,5000,0,0,0,1 //knight
+ygg_edge,0,0	monster	Eremes	20032,10,5000,0,0,0,1 //assassin
+ygg_edge,0,0	monster	Howard	20033,10,5000,0,0,0,1 //blacksmith
+ygg_edge,0,0	monster	Cecil	20034,10,5000,0,0,0,1 //hunter
+
+payon,0,0	monster	Anya	20022,100,5000,0,0,0,1 //novice_wing
+payon,0,0	monster	Alex	20023,50,5000,0,0,0,1 //novice_boy
+
+//============================================================================
+//	Caspen Dungeon - for them without place to live
+//============================================================================
+casp_dun01	boss_monster	Immortal Monarch	22497,1,720000,600000,1
+casp_dun01	boss_monster	Phantom Amdarais	20573,1,720000,600000,1
+
+casp_dun02	boss_monster	Galaring EX	22677,1,720000,600000,1
+casp_dun02	monster	Galaring	22672,5,5000
+casp_dun02	monster	Squidbomb	22673,5,5000
+
+jawaii,0,0	monster	Margareth	20036,20,5000,0,0,0,1 //High priest

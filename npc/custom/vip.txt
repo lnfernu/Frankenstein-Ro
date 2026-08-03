@@ -1,0 +1,276 @@
+prt_in,37,95,3	script	VIP System	811,{
+if (getgroupid()<4) {
+goto Prem;
+}
+
+set .@Timer, vip_status(VIP_STATUS_EXPIRE);
+
+mes "[ VIP NPC ]";
+mes "Welcome "+strcharinfo(0)+",";
+mes "Please choose the menu.";
+mes "^FF0000Your VIP Status will Expire at:^000000";
+mes gettimestr("%Y-%m/%d %H:%M:%S",21,vip_status(VIP_STATUS_EXPIRE));
+mes "^FF0000Time Left: ^000000" + callfunc("Time2Str",.@Timer);
+next;
+mes "[ VIP NPC ]";
+mes "Just for fun.";
+mes "Enjoy.";
+next;
+switch(select("Buy items:Get buffs:No, thanks.")) {
+	case 1:
+		mes "Choose items do you wants.";
+		goto item_list;
+
+		item_list:
+		menu "90x World Tour Ticket 500000 zeny",world_tour_ticket,"7 Days Unlimited Flywing 50000 zeny",fly_wing,"3 Days Concentration Potion 30000 zeny",aspd1,"3 Days Awakening Potion 30000 zeny",aspd2,"3 Days Berserk Potion 30000 zeny",aspd3;
+
+		world_tour_ticket:
+		set .@amount, countitem(25464);
+		if (zeny < 500000) mes "Sorry,Your zeny not enough,";
+		else if (.@amount >= 100) mes "You still have the item.";
+		else{
+		getitem 25464,90;
+		set zeny,zeny-50000;
+		}
+		close;
+		
+		fly_wing:
+		set .@amount, countitem(12887);
+		if (zeny < 50000) mes "Sorry,Your zeny not enough,";
+		else if (.@amount >= 1) mes "You still have the item.";
+		else{
+		getitem 17229,1;
+		set zeny,zeny-50000;
+		}
+		close;
+
+		aspd1:
+		set .@amount, countitem(12884);
+		if (zeny < 30000) mes "Sorry,Your zeny not enough,";
+		else if (.@amount >= 1) mes "You still have the item.";
+		else{
+		getitem 17263,1;
+		set zeny,zeny-30000;
+		}
+		close;
+
+		aspd2:
+		set .@amount, countitem(12885);
+		if (zeny < 30000) mes "Sorry,Your zeny not enough,";
+		else if (.@amount >= 1) mes "You still have the item.";
+		else{
+		getitem 17264,1;
+		set zeny,zeny-30000;
+		}
+		close;
+
+		aspd3:
+		set .@amount, countitem(12886);
+		if (zeny < 30000) mes "Sorry,Your zeny not enough,";
+		else if (.@amount >= 1) mes "You still have the item.";
+		else{
+		getitem 17265,1;
+		set zeny,zeny-30000;
+		}
+		close;
+
+	case 2:
+		mes "[ VIP NPC ]";
+		mes "+10 stats buff";
+//		mes "First Buff ^FF0000STR +8, AGI +6, DEX +4, ATK +32^000000";
+//		mes "Second Buffs ^FF0000INT +8, DEX +6, VIT +4, MATK +40^000000";
+		next;
+//		mes "Third Buffs ^FF0000Dex +8, AGI +6, LUK +4, ATK +24, MATK +24^000000";
+//		mes "Fourth Buffs ^FF0000all stat +6, ATK +24, MATK +24^000000";
+		goto buff;
+
+		buff:
+		menu "+10 Buff",First;
+		//,"Second Buffs",Second,"Third Buffs",Third,"Fourth Buffs",Fourth;
+
+First:
+percentheal 100,100;
+skilleffect 384,0; sc_start SC_MELTDOWN,3600000,5;
+skilleffect 383,0; sc_start SC_WINDWALK,3600000,5;
+skilleffect 378,0; sc_start SC_EDP,3600000,5;
+skilleffect 465,0; sc_start SC_KAITE,3600000,7;
+skilleffect 464,0; sc_start SC_KAUPE,3600000,3;
+skilleffect 463,0; sc_start SC_KAAHI,3600000,7;
+skilleffect 462,0; sc_start SC_KAIZEL,3600000,7;
+skilleffect 8,0; sc_start SC_ENDURE,3600000,10;
+skilleffect 33,0; sc_start SC_ANGELUS,3600000,10;
+skilleffect 45,0; sc_start SC_CONCENTRATE,3600000,10;
+skilleffect 74,0; sc_start SC_MAGNIFICAT,3600000,5;
+skilleffect 75,0; sc_start SC_GLORIA,3600000,5;
+skilleffect 459,0; sc_start SC_ADRENALINE2,3600000,1;
+skilleffect 66,0; sc_start SC_IMPOSITIO,3600000,5;
+skilleffect 67,0; sc_start SC_SUFFRAGIUM,3600000,3;
+skilleffect 34,0; sc_start SC_BLESSING,3600000,10;
+skilleffect 29,0; sc_start SC_INCREASEAGI,3600000,10;
+skilleffect 112,0; sc_start SC_WEAPONPERFECTION,3600000,10;
+skilleffect 113,0; sc_start SC_OVERTHRUST,3600000,5;
+skilleffect 114,0; sc_start SC_MAXIMIZEPOWER,3600000,5;
+skilleffect 357,0; sc_start SC_CONCENTRATION,3600000,5;
+skilleffect 355,0; sc_start SC_AURABLADE,3600000,5;
+skilleffect 155,0; sc_start SC_LOUD,3600000,1;
+skilleffect 157,0; sc_start SC_ENERGYCOAT,3600000,1;
+sc_start SC_ASPDPOTION2,3600000,0;
+sc_start SC_STRFood,3600000,10;
+sc_start SC_AGIFood,3600000,10;
+sc_start SC_VITFood,3600000,10;
+sc_start SC_INTFood,3600000,10;
+sc_start SC_DEXFood,3600000,10;
+sc_start SC_LUKFood,3600000,10;
+sc_start SC_HitFood,3600000,30;
+sc_start SC_FleeFood,3600000,30;
+sc_start SC_BATKFood,3600000,10;
+sc_start SC_MATKFood,3600000,10;
+skilleffect 380,0; sc_start SC_TRUESIGHT,3600000,5;
+skilleffect 361,0; sc_start SC_ASSUMPTIO,3600000,5;
+close;
+
+Second:
+sc_start SC_INTFOOD,3600000,8;
+sc_start SC_DEXFOOD,3600000,6;
+sc_start SC_VITFOOD,3600000,4;
+sc_start SC_MATKPOTION,3600000,40;
+percentheal 100,100;
+close;
+
+Third:
+sc_start SC_DEXFOOD,3600000,8;
+sc_start SC_AGIFOOD,3600000,6;
+sc_start SC_LUKFOOD,3600000,4;
+sc_start SC_ATKPOTION,3600000,24;
+sc_start SC_MATKPOTION,3600000,24;
+percentheal 100,100;
+close;
+
+Fourth:
+sc_start SC_STRFOOD,3600000,6;
+sc_start SC_AGIFOOD,3600000,6;
+sc_start SC_VITFOOD,3600000,6;
+sc_start SC_INTFOOD,3600000,6;
+sc_start SC_DEXFOOD,3600000,6;
+sc_start SC_LUKFOOD,3600000,6;
+sc_start SC_ATKPOTION,3600000,24;
+sc_start SC_MATKPOTION,3600000,24;
+percentheal 100,100;
+close;
+
+	case 3:
+	mes "See you next time.";
+	close;
+	}
+
+Prem:
+set .@day,1000;
+set .@week,5000;
+set .@month,20000;
+if (getgroupid()>60) {
+mes "[ VIP NPC ]";
+mes "Sorry,GM staff not allowed to use this feature.";
+close;
+}
+
+mes "[ VIP NPC ]";
+mes "Use cash points to be an VIP.";
+mes "24 hours "+.@day+" cash points";
+mes "1 week "+.@week+" cash points";
+mes "1 month "+.@month+" cash points";
+mes "Your current cashpoints "+#CASHPOINTS+".";
+next;
+mes "[ VIP NPC ]";
+mes "Just for fun.";
+mes "Enjoy.";
+next;
+switch(select("Register for 24 hours:Register for 1 Week:Register for 1 Month:No, Thanks.")) {
+case 1:
+if (#CASHPOINTS < .@day) {
+mes "[ VIP NPC ]";
+mes "Your cash points not enough,";
+mes ""+.@day+" cash points to use this feature.";
+close;
+}
+set #CASHPOINTS, #CASHPOINTS - .@day;
+atcommand "@vip +24h "+strcharinfo(0)+"";
+mes "[ VIP NPC ]";
+mes "Enjoy your service.";
+dispbottom "Your current cashpoints "+#CASHPOINTS+".";
+close;
+
+case 2:
+if (#CASHPOINTS < .@week) {
+mes "[ VIP NPC ]";
+mes "Your cash points not enough,";
+mes ""+.@week+" cash points to use this feature.";
+close;
+}
+set #CASHPOINTS, #CASHPOINTS - .@week;
+atcommand "@vip +7d "+strcharinfo(0)+"";
+mes "[ VIP NPC ]";
+mes "Enjoy your service.";
+dispbottom "Your current cashpoints "+#CASHPOINTS+".";
+close;
+
+case 3:
+if (#CASHPOINTS < .@month) {
+mes "[ VIP NPC ]";
+mes "Your cash points not enough,";
+mes ""+.@month+" cash points to use this feature.";
+close;
+}
+set #CASHPOINTS, #CASHPOINTS - .@month;
+atcommand "@vip +1m "+strcharinfo(0)+"";
+mes "[ VIP NPC ]";
+mes "Enjoy your service.";
+dispbottom "Your current cashpoints "+#CASHPOINTS+".";
+close;
+
+case 4:
+mes "[ VIP NPC ]";
+mes "See You next time.";
+close;
+}
+
+}
+
+// --------------------------------------------------
+//	Duplicates:
+// --------------------------------------------------
+alberta,33,240,4	duplicate(VIP System)	VIP System#alb	811
+aldebaran,146,116,4	duplicate(VIP System)	VIP System#alde	811
+amatsu,205,87,4	duplicate(VIP System)	VIP System#ama	811
+ayothaya,212,172,6	duplicate(VIP System)	VIP System#ayo	811
+comodo,191,161,4	duplicate(VIP System)	VIP System#com	811
+einbech,55,36,6	duplicate(VIP System)	VIP System#einbe	811
+einbroch,72,206,4	duplicate(VIP System)	VIP System#einbr	811
+geffen,127,66,4	duplicate(VIP System)	VIP System#gef	811
+gonryun,162,126,4	duplicate(VIP System)	VIP System#gon	811
+hugel,102,148,4	duplicate(VIP System)	VIP System#hug	811
+izlude,128,152,4	duplicate(VIP System)	VIP System#izl	811	//Pre-RE: (132,120)
+jawaii,248,134,4	duplicate(VIP System)	VIP System#jaw	811
+lighthalzen,154,104,4	duplicate(VIP System)	VIP System#lhz	811
+louyang,205,105,6	duplicate(VIP System)	VIP System#lou	811
+manuk,272,150,6	duplicate(VIP System)	VIP System#man	811
+mid_camp,216,286,4	duplicate(VIP System)	VIP System#mid	811
+morocc,146,89,4	duplicate(VIP System)	VIP System#mor	811
+moscovia,226,195,4	duplicate(VIP System)	VIP System#mos	811
+niflheim,199,180,4	duplicate(VIP System)	VIP System#nif	811
+payon,178,109,4	duplicate(VIP System)	VIP System#pay	811
+rachel,138,122,4	duplicate(VIP System)	VIP System#rac	811
+splendide,198,153,4	duplicate(VIP System)	VIP System#spl	811
+umbala,97,148,3	duplicate(VIP System)	VIP System#umb	811
+veins,211,120,4	duplicate(VIP System)	VIP System#ve	811
+xmas,142,139,6	duplicate(VIP System)	VIP System#xmas	811
+yuno,164,50,4	duplicate(VIP System)	VIP System#yuno	811
+//Welgaia,136,119,5	duplicate(VIP System)	VIP System#base	811
+
+// --------------------------------------------------
+//	Duplicates (Renewal):
+// --------------------------------------------------
+brasilis,199,225,4	duplicate(VIP System)	VIP System#bra	811
+dewata,202,190,6	duplicate(VIP System)	VIP System#dew	811
+dicastes01,196,197,6	duplicate(VIP System)	VIP System#dic	811
+malangdo,137,116,6	duplicate(VIP System)	VIP System#mal	811
+malaya,228,195,4	duplicate(VIP System)	VIP System#ma	811

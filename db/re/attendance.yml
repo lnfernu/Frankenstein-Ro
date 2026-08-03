@@ -1,0 +1,99 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Attendance Database
+###########################################################################
+#
+# Attendance Settings
+#
+###########################################################################
+# - Start                   Start date.
+#   End                     End date.
+#   Rewards:                List of rewards for each day.
+#     - Day                 Reward day.
+#       ItemId              Item ID.
+###########################################################################
+
+Header:
+  Type: ATTENDANCE_DB
+  Version: 1
+
+Body:
+  - Start: 20260731
+    End: 20260828
+    Rewards:
+      - Day: 1
+        ItemId: 25464
+        Amount: 10
+      - Day: 2
+        ItemId: 13758
+        Amount: 1
+      - Day: 3
+        ItemId: 12261
+        Amount: 18
+      - Day: 4
+        ItemId: 12211
+        Amount: 18
+      - Day: 5
+        ItemId: 23475
+        Amount: 18
+      - Day: 6
+        ItemId: 17251
+        Amount: 1
+      - Day: 7
+        ItemId: 13709
+        Amount: 1
+      - Day: 8
+        ItemId: 17569
+        Amount: 1
+      - Day: 9
+        ItemId: 14545
+        Amount: 18
+      - Day: 10
+        ItemId: 17162
+        Amount: 1
+      - Day: 11
+        ItemId: 12754
+        Amount: 50
+      - Day: 12
+        ItemId: 12264
+        Amount: 18
+      - Day: 13
+        ItemId: 12261
+        Amount: 18
+      - Day: 14
+        ItemId: 25464
+        Amount: 30
+      - Day: 15
+        ItemId: 6635
+        Amount: 2
+      - Day: 16
+        ItemId: 7338
+        Amount: 50
+      - Day: 17
+        ItemId: 12790
+        Amount: 1
+      - Day: 18
+        ItemId: 14799
+        Amount: 1
+      - Day: 19
+        ItemId: 12211
+        Amount: 25
+      - Day: 20
+        ItemId: 20724
+        Amount: 1
