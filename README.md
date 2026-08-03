@@ -169,15 +169,15 @@ Integrated into Frankenstein RO.
 
 ## Tradução PT-BR
 
-Parte das traduções dos NPCs e scripts foram baseadas no projeto:
+Some of the NPC and script translations were based on the project:
 
 - NPC-PTBR
-- Autor: NYD-DARK
-- Repositório:
+- Author: NYD-DARK
+- Repository:
   https://github.com/NYD-DARK/NPC-PTBR
 
-As traduções foram adaptadas e integradas ao Frankenstein RO,
-com ajustes de compatibilidade para a versão atual do rAthena.
+The translations were adapted and integrated into Frankenstein RO,
+with compatibility adjustments for the current version of rAthena.
 
 ---
 
