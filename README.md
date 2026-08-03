@@ -1,81 +1,395 @@
-<img src="doc/logo.png" align="right" height="90" />
+# Frankenstein RO
+## Credits, References & Disclaimer
 
-# rAthena
-![clang](https://img.shields.io/github/actions/workflow/status/rathena/rathena/build_servers_clang.yml?label=clang%20build&logo=llvm) 
-![cmake](https://img.shields.io/github/actions/workflow/status/rathena/rathena/build_servers_cmake.yml?label=cmake%20build&logo=cmake)
-![gcc](https://img.shields.io/github/actions/workflow/status/rathena/rathena/build_servers_gcc.yml?label=gcc%20build&logo=gnu) 
-![ms](https://img.shields.io/github/actions/workflow/status/rathena/rathena/build_servers_msbuild.yml?label=ms%20build&logo=visualstudio) 
-![GitHub](https://img.shields.io/github/license/rathena/rathena.svg) 
-![commit activity](https://img.shields.io/github/commit-activity/w/rathena/rathena) 
-![GitHub repo size](https://img.shields.io/github/repo-size/rathena/rathena.svg)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/rathena/rathena)
+---
 
+# Disclaimer
 
-> rAthena is a collaborative software development project revolving around the creation of a robust massively multiplayer online role playing game (MMORPG) server package. Written in C++, the program is very versatile and provides NPCs, warps and modifications. The project is jointly managed by a group of volunteers located around the world as well as a tremendous community providing QA and support. rAthena is a continuation of the eAthena project.
+This project does not intentionally distribute original Ragnarok Online game files, proprietary assets or commercial content.
 
-[Forum](https://rathena.org/board)|[Discord](https://rathena.org/discord)|[Wiki](https://github.com/rathena/rathena/wiki)|[FluxCP](https://github.com/rathena/FluxCP)|[Crowdfunding](https://rathena.org/board/crowdfunding/)|[Fork and Pull Request Q&A](https://rathena.org/board/topic/86913-pull-request-qa/)
---------|--------|--------|--------|--------|--------
+Frankenstein RO is a personal experimental project created for learning, research and development purposes.
 
-### Table of Contents
-1. [Prerequisites](#1-prerequisites)
-2. [Installation](#2-installation)
-3. [Troubleshooting](#3-troubleshooting)
-4. [More Documentation](#4-more-documentation)
-5. [How to Contribute](#5-how-to-contribute)
-6. [License](#6-license)
+The main objective of this project is to study and experiment with Ragnarok Online server development, rAthena, client integration, scripting, database management, custom systems and gameplay modifications.
 
-## 1. Prerequisites
-Before installing rAthena there are certain tools and applications you will need which
-differs between the varying operating systems available.
+This project uses a combination of publicly available resources, community contributions, Ragnarok Online related references, personal modifications and experimental implementations.
 
-### Hardware
-Hardware Type | Minimum | Recommended
-------|------|------
-CPU | 1 Core | 2 Cores
-RAM | 1 GB | 2 GB
-Disk Space | 300 MB | 500 MB
+However, I cannot guarantee that every listed source is the original author or creator of the content. Some references may point to reposts, mirrors, modifications or community archives where the original creator is unknown.
 
-### Operating System & Preferred Compiler
-Operating System | Compiler
-------|------
-Linux  | [gcc-6 or newer](https://www.gnu.org/software/gcc/gcc-6/) / [Make](https://www.gnu.org/software/make/)
-Windows | [MS Visual Studio 2017 or newer](https://www.visualstudio.com/downloads/)
+If you are the original author of any content used in Frankenstein RO and your name is missing, incorrect or incomplete, please contact me so proper credit can be added or corrected.
 
-### Required Applications
-Application | Name
-------|------
-Database | [MySQL 5 or newer](https://www.mysql.com/downloads/) / [MariaDB 5 or newer](https://downloads.mariadb.org/)
-Git | [Windows](https://gitforwindows.org/) / [Linux](https://git-scm.com/download/linux)
+This project is provided for educational and research purposes only.
 
-### Optional Applications
-Application | Name
-------|------
-Database | [MySQL Workbench 5 or newer](http://www.mysql.com/downloads/workbench/)
+I am not responsible for any misuse, unauthorized use, redistribution, modifications or any other use made by third parties using this project.
 
-## 2. Installation 
+The purpose of this document is to preserve references and give credit to the Ragnarok Online community and its contributors.
 
-### Full Installation Instructions
-  * [Windows](https://github.com/rathena/rathena/wiki/Install-on-Windows)
-  * [CentOS](https://github.com/rathena/rathena/wiki/Install-on-Centos)
-  * [Debian](https://github.com/rathena/rathena/wiki/Install-on-Debian)
-  * [FreeBSD](https://github.com/rathena/rathena/wiki/Install-on-FreeBSD)
+---
 
-## 3. Troubleshooting
+# Project Information
 
-If you're having problems with starting your server, the first thing you should
-do is check what's happening on your consoles. More often that not, all support issues
-can be solved simply by looking at the error messages given. Check out the [wiki](https://github.com/rathena/rathena/wiki)
-or [forums](https://rathena.org/board) if you need more support on troubleshooting.
+## Frankenstein RO
 
-## 4. More Documentation
-rAthena has a large collection of help files and sample NPC scripts located in the /doc/
-directory. These include detailed explanations of NPC script commands, atcommands (@),
-group permissions, item bonuses, and packet structures, among many other topics. We
-recommend that all users take the time to look over this directory before asking for
-assistance elsewhere.
+Frankenstein RO is an experimental Ragnarok Online project built by combining different technologies, resources, scripts, references and ideas from the Ragnarok Online community.
 
-## 5. How to Contribute
-Details on how to contribute to rAthena can be found in [CONTRIBUTING.md](https://github.com/rathena/rathena/blob/master/.github/CONTRIBUTING.md)!
+The name reflects the development process:
 
-## 6. License
-Copyright (c) rAthena Development Team - Licensed under [GNU General Public License v3.0](https://github.com/rathena/rathena/blob/master/LICENSE)
+A combination of different components brought together into a single customized Ragnarok Online experience.
+
+The project includes:
+
+- rAthena server base;
+- Ragnarok Online inspired content references;
+- Community contributions;
+- Custom systems;
+- Client modifications;
+- Gameplay adjustments;
+- Experimental features.
+
+---
+
+# Original Game Rights
+
+## Gravity Co., Ltd.
+
+Ragnarok Online is a game developed and owned by Gravity Co., Ltd.
+
+Official website:
+
+https://www.gravity.co.kr/
+
+Frankenstein RO is an unofficial fan-made experimental project created for educational and research purposes.
+
+This project is not affiliated with, endorsed by, or supported by Gravity Co., Ltd.
+
+All original Ragnarok Online intellectual property, including:
+
+- Characters;
+- Names;
+- Lore;
+- Maps;
+- Artwork;
+- Official assets;
+- Game concepts;
+
+belong to Gravity Co., Ltd. and their respective owners.
+
+---
+
+# Server Base
+
+## rAthena
+
+Main server emulator base.
+
+Website:
+
+https://rathena.org/
+
+Repository:
+
+https://github.com/rathena/rathena
+
+Used for:
+
+- Server emulator core;
+- Script engine;
+- Database structure;
+- Main server framework;
+- Development foundation.
+
+---
+
+# Community References
+
+## OfflineRO
+
+Reference:
+
+https://www.youtube.com/@offlinero
+
+Used for:
+
+- rAthena development studies;
+- Server customization references;
+- Feature research;
+- Fake player simulation research and experimentation.
+
+Notes:
+
+OfflineRO provided references and inspiration for custom server features, including fake player systems used to simulate player activity.
+
+---
+
+## PercyNPC
+
+Reference:
+
+https://www.youtube.com/@PercyNPC
+
+Used for:
+
+- VIP system studies;
+- rAthena 2026 implementation references;
+- OpenKore integration research;
+- Automation system studies.
+
+---
+
+# Class Implementations
+
+## Druid / Karnos / Alitea Classes
+
+Author:
+
+datawulf
+
+GitHub:
+
+https://github.com/datawulf
+
+Reference:
+
+rAthena Pull Request #9765
+
+https://github.com/rathena/rathena/pull/9765
+
+Used for:
+
+- Druid class implementation;
+- Karnos class implementation;
+- Alitea class implementation.
+
+Status:
+
+Integrated into Frankenstein RO.
+
+---
+
+# Client & Resources
+
+## 2026-01-07 Ragexe ClientInfo + WARP
+
+Author:
+
+VictorHug0
+
+Reference:
+
+https://rathena.org/board/topic/149414-2026-01-07-ragexe-clientinfo-warp/
+
+Profile:
+
+https://rathena.org/board/profile/22192-victorhug0/
+
+Used for:
+
+- 2026 Ragnarok Online client research;
+- Ragexe ClientInfo studies;
+- WARP compatibility;
+- Modern client environment testing;
+- Client-side integration research.
+
+Notes:
+
+This reference was used during the client modernization process of Frankenstein RO.
+
+Credits belong to VictorHug0 and all original contributors involved in this reference.
+
+---
+
+## Ragnarok Online Client Resources
+
+Used resources include:
+
+- Client resources from different Ragnarok Online environments and community references;
+- Sprites;
+- Effects;
+- Interface improvements;
+- Visual updates;
+- Compatibility research and adjustments.
+
+Sources:
+
+Additional client resources are documented separately as their original sources are identified.
+
+Notes:
+
+Some resources may originate from official clients, community projects, private distributions or modified releases.
+
+Original creators should be credited whenever identified.
+---
+
+# Scripts & Episode References
+
+## rAthena Scripts / Official Episodes
+
+Sources:
+
+- rAthena official scripts;
+- Official episode scripts;
+- Community contributions.
+
+Used for:
+
+- Quests;
+- NPC systems;
+- Episode content;
+- Official gameplay mechanics.
+
+Modifications:
+
+- Custom adjustments;
+- Balance changes;
+- Future translations;
+- Gameplay adaptations.
+
+---
+
+# Server Tools
+
+## Server Monitor 2.2.6
+
+Author:
+
+DarkIrata
+
+Reference:
+
+https://rathena.org/board/files/file/2433-server-monitor/
+
+Used for:
+
+- Server monitoring;
+- Administration tools;
+- Server status tracking.
+
+---
+
+# Integration Work
+
+## Frankenstein RO Integration
+
+This project combines and adapts different components from multiple sources into a single Ragnarok Online environment.
+
+Integration work includes:
+
+- Server compatibility adjustments;
+- Database merges;
+- Client/server synchronization;
+- Script adaptations;
+- Resource integration;
+- Custom balancing;
+- Testing and debugging;
+- Feature integration.
+
+The main purpose of Frankenstein RO is not only collecting resources, but also understanding how different systems interact and creating a functional customized environment.
+
+---
+
+# Custom Development
+
+## Frankenstein RO Original Work
+
+Custom modifications created specifically for this project.
+
+## Server Systems
+
+- Custom VIP system;
+- VIP plans;
+- VIP shop;
+- VIP buffs;
+- Economy adjustments;
+- NPC modifications;
+- Gameplay balancing;
+- Server configuration improvements.
+
+## Client Improvements
+
+- Modern client integration;
+- Resource integration;
+- Visual improvements;
+- Compatibility fixes.
+
+## Experimental Systems
+
+- Fake player system research;
+- OpenKore compatibility and automation research;
+- Native Auto Hunt research;
+- Automation studies;
+- Custom gameplay experiments.
+
+---
+
+# Development Notes
+
+## Client Visibility Fix
+
+Problem:
+
+Monsters were visible only at short distance despite camera adjustments.
+
+Solution:
+
+Changed `conf/battle/client.conf` (`area_size`).
+
+---
+
+## GM Appearance Issue
+
+Problem:
+
+A clientinfo account/group ID displayed GM appearance without actual GM permissions.
+
+Solution:
+
+Adjusted clientinfo configuration.
+
+---
+
+# Development Environment
+
+## Tools Used
+
+- GRF Editor;
+- Git;
+- Visual Studio;
+- MySQL;
+- phpMyAdmin;
+- OpenKore;
+- rAthena development tools.
+
+---
+
+# Project Status
+
+Frankenstein RO is considered a completed experimental study.
+
+The objective was to verify if it was possible to combine different Ragnarok Online technologies, resources and systems into a functional customized environment.
+
+After reaching this goal, the active development phase was concluded.
+
+There will be no planned future updates or continued development for this project.
+
+The project is being shared as a reference and learning material for the Ragnarok Online community.
+
+---
+
+# Credits Policy
+
+All credits belong to their respective authors, developers and communities.
+
+Third-party content remains property of its respective authors and copyright holders.
+
+This document exists only to preserve references, acknowledge contributions and maintain transparency.
+
+If any credit information is incorrect or incomplete, please contact me for correction.
+
+---
+
+# Frankenstein RO
+
+Built from many pieces.
+
+Built as an experiment.
+
+Built to prove that different systems could become one functional experience.
