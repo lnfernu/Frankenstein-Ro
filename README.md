@@ -164,6 +164,22 @@ Status:
 Integrated into Frankenstein RO.
 
 ---
+ 
+## Créditos e projetos utilizados
+
+### Tradução PT-BR
+
+Parte das traduções dos NPCs e scripts foram baseadas no projeto:
+
+- NPC-PTBR
+- Autor: NYD-DARK
+- Repositório:
+  https://github.com/NYD-DARK/NPC-PTBR
+
+As traduções foram adaptadas e integradas ao Frankenstein RO,
+com ajustes de compatibilidade para a versão atual do rAthena.
+
+---
 
 # Client & Resources
 
