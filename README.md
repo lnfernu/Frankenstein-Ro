@@ -165,9 +165,9 @@ Integrated into Frankenstein RO.
 
 ---
  
-## Créditos e projetos utilizados
+# Créditos e projetos utilizados
 
-### Tradução PT-BR
+## Tradução PT-BR
 
 Parte das traduções dos NPCs e scripts foram baseadas no projeto:
 
@@ -314,7 +314,6 @@ Custom modifications created specifically for this project.
 - VIP plans;
 - VIP shop;
 - VIP buffs;
-- Economy adjustments;
 - NPC modifications;
 - Gameplay balancing;
 - Server configuration improvements.
@@ -378,15 +377,15 @@ Adjusted clientinfo configuration.
 
 # Project Status
 
-Frankenstein RO is considered a completed experimental study.
+Frankenstein RO is an ongoing experimental Ragnarok Online development project.
 
-The objective was to verify if it was possible to combine different Ragnarok Online technologies, resources and systems into a functional customized environment.
+The project started as a study to verify if different Ragnarok Online technologies, resources and systems could be combined into a functional customized environment.
 
-After reaching this goal, the active development phase was concluded.
+After reaching this initial goal, the project evolved into a continuous development and refinement process, including server improvements, translation integration, client compatibility research, gameplay adjustments and custom system development.
 
-There will be no planned future updates or continued development for this project.
+The project is currently maintained as a personal research and development environment, focused on experimentation, learning and improving the Ragnarok Online experience.
 
-The project is being shared as a reference and learning material for the Ragnarok Online community.
+Updates may occur as new ideas, fixes, improvements and experiments are implemented.
 
 ---
 
