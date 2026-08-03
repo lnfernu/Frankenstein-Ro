@@ -165,8 +165,6 @@ Integrated into Frankenstein RO.
 
 ---
  
-# Créditos e projetos utilizados
-
 ## Tradução PT-BR
 
 Parte das traduções dos NPCs e scripts foram baseadas no projeto:
