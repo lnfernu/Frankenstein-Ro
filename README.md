@@ -167,7 +167,7 @@ Integrated into Frankenstein RO.
  
 # Part of the Project Translation
 
-## Tradução PT-BR
+## Translation PT-BR
 
 Some of the NPC and script translations were based on the project:
 
