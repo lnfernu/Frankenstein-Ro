@@ -136,6 +136,58 @@ Notes:
 
 OfflineRO provided references and inspiration for custom server features, including fake player systems used for simulation and experimentation.
 
+### Fake Player System
+
+Frankenstein RO includes an experimental **Fake Player** system inspired by studies and references from the **OfflineRO** project.
+
+The system is provided for **development, testing and server simulation** purposes and is **disabled by default**.
+
+#### Enabling Fake Players
+
+Open the following file:
+
+```text
+npc/re/scripts_monsters.conf
+```
+
+Locate this line:
+
+```text
+//npc: npc/re/mobs/cust_wsm.txt
+```
+
+Remove the leading `//` so it becomes:
+
+```text
+npc: npc/re/mobs/cust_wsm.txt
+```
+
+Save the file and restart the server, or reload the NPC scripts.
+
+#### Disabling Fake Players
+
+Open:
+
+```text
+npc/re/scripts_monsters.conf
+```
+
+Locate:
+
+```text
+npc: npc/re/mobs/cust_wsm.txt
+```
+
+Comment the line by adding `//` at the beginning:
+
+```text
+//npc: npc/re/mobs/cust_wsm.txt
+```
+
+Save the file and restart the server, or reload the NPC scripts.
+
+> **Note:** This system is intended for development, testing and simulation environments. It is optional, disabled by default, and can be enabled or disabled at any time through the NPC configuration without affecting the rest of the project.
+
 ---
 
 ## PercyNPC
