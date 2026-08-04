@@ -15,7 +15,7 @@ This project uses a combination of publicly available resources, community contr
 
 However, I cannot guarantee that every listed source is the original author or creator of the content. Some references may point to reposts, mirrors, modifications or community archives where the original creator is unknown.
 
-If you are the original author of any content used in Frankenstein RO and your name is missing, incorrect or incomplete, please contact me so proper credit can be added or corrected.
+If you are the original author of any content used in Frankenstein RO and your name is missing, incorrect or incomplete, please contact me so proper credit can be added or corrected when possible.
 
 This project is provided for educational and research purposes only.
 
@@ -33,12 +33,30 @@ Frankenstein RO is an experimental Ragnarok Online project built by combining di
 
 The name reflects the development process:
 
-A combination of different components brought together into a single customized Ragnarok Online experience.
+A combination of different components brought together into a single customized Ragnarok Online experience, similar to the concept of assembling different parts into one creation.
+
+---
+
+# Project History and Purpose
+
+Frankenstein RO was not originally created as a public project.
+
+The repository was created after experiencing the difficulty of maintaining and combining multiple systems, resources, scripts, configurations and modifications into a single Ragnarok Online environment.
+
+During development, several components were merged, tested, modified and adapted. Without proper version control and organization, the project became difficult to recover and maintain, resulting in loss of previous work and development history.
+
+The purpose of this repository is to preserve the development process, maintain version history and document the experiments made during the creation of Frankenstein RO.
+
+After reaching a more stable state, the project was made public as a technical reference for people interested in Ragnarok Online server development, rAthena customization and experimental development processes.
+
+The repository represents the history of an experimental development process, including successes, failures, tests and solutions discovered along the way.
+
+---
 
 The project includes:
 
 - rAthena server base;
-- Ragnarok Online inspired content references;
+- Ragnarok Online related content references;
 - Community contributions;
 - Custom systems;
 - Client modifications;
@@ -116,7 +134,7 @@ Used for:
 
 Notes:
 
-OfflineRO provided references and inspiration for custom server features, including fake player systems used to simulate player activity.
+OfflineRO provided references and inspiration for custom server features, including fake player systems used for simulation and experimentation.
 
 ---
 
@@ -164,20 +182,19 @@ Status:
 Integrated into Frankenstein RO.
 
 ---
- 
-# Part of the Project Translation
 
-## Translation PT-BR
+# Localization Contributions
 
-Some of the NPC and script translations were based on the project:
+## PT-BR Translation
+
+Some NPC and script translations were based on the project:
 
 - NPC-PTBR
 - Author: NYD-DARK
 - Repository:
   https://github.com/NYD-DARK/NPC-PTBR
 
-The translations were adapted and integrated into Frankenstein RO,
-with compatibility adjustments for the current version of rAthena.
+The translations were adapted and integrated into Frankenstein RO, with compatibility adjustments for the current rAthena version.
 
 ---
 
@@ -185,11 +202,17 @@ with compatibility adjustments for the current version of rAthena.
 
 ## 2026-01-07 Ragexe ClientInfo + WARP
 
-Author: VictorHug0
+Author:
 
-Reference: https://rathena.org/board/topic/149414-2026-01-07-ragexe-clientinfo-warp/
+VictorHug0
 
-Profile: https://rathena.org/board/profile/22192-victorhug0/
+Reference:
+
+https://rathena.org/board/topic/149414-2026-01-07-ragexe-clientinfo-warp/
+
+Profile:
+
+https://rathena.org/board/profile/22192-victorhug0/
 
 Used for:
 
@@ -227,6 +250,7 @@ Notes:
 Some resources may originate from official clients, community projects, private distributions or modified releases.
 
 Original creators should be credited whenever identified.
+
 ---
 
 # Scripts & Episode References
@@ -250,7 +274,7 @@ Modifications:
 
 - Custom adjustments;
 - Balance changes;
-- Future translations;
+- Translation adaptations;
 - Gameplay adaptations.
 
 ---
@@ -259,9 +283,13 @@ Modifications:
 
 ## Server Monitor 2.2.6
 
-Author: DarkIrata
+Author:
 
-Reference: https://rathena.org/board/files/file/2433-server-monitor/
+DarkIrata
+
+Reference:
+
+https://rathena.org/board/files/file/2433-server-monitor/
 
 Used for:
 
@@ -288,13 +316,13 @@ Integration work includes:
 - Testing and debugging;
 - Feature integration.
 
-The main purpose of Frankenstein RO is not only collecting resources, but also understanding how different systems interact and creating a functional customized environment.
+The main purpose of Frankenstein RO is not only collecting resources, but understanding how different systems interact and creating a functional customized environment.
 
 ---
 
 # Custom Development
 
-## Frankenstein RO Original Work
+## Frankenstein RO Custom Modifications
 
 Custom modifications created specifically for this project.
 
@@ -367,15 +395,21 @@ Adjusted clientinfo configuration.
 
 # Project Status
 
-Frankenstein RO is an ongoing experimental Ragnarok Online development project.
+Frankenstein RO is a personal experimental Ragnarok Online development project.
 
 The project started as a study to verify if different Ragnarok Online technologies, resources and systems could be combined into a functional customized environment.
 
-After reaching this initial goal, the project evolved into a continuous development and refinement process, including server improvements, translation integration, client compatibility research, gameplay adjustments and custom system development.
+After reaching this initial objective, the project continued as a personal research and experimentation environment, including server improvements, translation integration, client compatibility research, gameplay adjustments and custom system development.
 
-The project is currently maintained as a personal research and development environment, focused on experimentation, learning and improving the Ragnarok Online experience.
+This repository is maintained as a record of development, experiments, solutions and discoveries made during the project.
 
-Updates may occur as new ideas, fixes, improvements and experiments are implemented.
+There is no commitment to provide regular updates, future versions, new classes, quests or continuous feature additions.
+
+Development will continue according to personal interest, available time and curiosity regarding new experiments.
+
+The project may remain inactive for periods of time and this does not represent abandonment or a commitment failure.
+
+The repository exists primarily as a technical reference and historical record of the development process.
 
 ---
 
@@ -387,7 +421,7 @@ Third-party content remains property of its respective authors and copyright hol
 
 This document exists only to preserve references, acknowledge contributions and maintain transparency.
 
-If any credit information is incorrect or incomplete, please contact me for correction.
+If any credit information is incorrect, incomplete or missing, please contact me so corrections can be made when possible.
 
 ---
 
@@ -397,4 +431,4 @@ Built from many pieces.
 
 Built as an experiment.
 
-Built to prove that different systems could become one functional experience.
+Built to explore how different systems could become one functional experience.
