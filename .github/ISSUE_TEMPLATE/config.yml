@@ -1,8 +1,10 @@
 blank_issues_enabled: false
+
 contact_links:
-  - name: rAthena Community Support
-    url: https://rathena.org/board/forum/3-support-releases/
-    about: Please ask and answer questions here in our forum.
-  - name: rAthena Discord
-    url: https://rathena.org/board/discord/
-    about: Chat with us in the Discord support channel.
+  - name: Community Discussions
+    url: https://github.com/lnfernu/Frankenstein-Ro/discussions
+    about: Feel free to ask questions, share ideas or discuss the project. Frankenstein RO is maintained during my free time, so responses may occasionally take a little longer, but every message is welcome and will be reviewed.
+
+  - name: Documentation
+    url: https://github.com/lnfernu/Frankenstein-Ro#readme
+    about: Please check the documentation first, as your question may already be answered there.

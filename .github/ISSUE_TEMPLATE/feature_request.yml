@@ -1,32 +1,75 @@
 name: Feature Request
-description: Suggest an idea for this project
-labels: ["type:enhancement"]
+description: Suggest a new feature, improvement or gameplay idea for Frankenstein RO.
+title: "[Feature]: "
+labels: ["enhancement"]
+
 body:
-  - type: dropdown
-    id: missing
+  - type: markdown
     attributes:
-      label: Is your request related to a missing official feature?
-      options:
-        - "Yes"
-        - "No"
+      value: |
+        Thank you for helping improve Frankenstein RO.
+
+        Suggestions are always welcome. Please keep in mind that this project is maintained by a single developer during their free time, so not every proposal can be implemented.
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Feature Proposal
+      description: Clearly describe the feature, improvement or gameplay change you would like to see.
+      placeholder: Describe your idea...
     validations:
       required: true
+
   - type: textarea
-    id: solution
+    id: motivation
     attributes:
-      label: Describe the solution you'd like
-      description: Provide a clear and concise description of what you want to happen.
+      label: Why would this improve the project?
+      description: Explain how this proposal would benefit the project or its players.
+      placeholder: What problem does it solve? What value does it add?
     validations:
       required: true
+
   - type: textarea
-    id: alternatives
+    id: implementation
     attributes:
-      label: Describe alternatives you've considered
-      description: Let us know about other solutions you've tried or researched.
+      label: Possible Implementation (Optional)
+      description: If you already have an idea of how this could work, describe it here.
+    validations:
+      required: false
+
   - type: textarea
-    id: context
+    id: references
     attributes:
-      label: Additional context
+      label: References (Optional)
       description: |
-        Is there anything else you can add about the proposal?
-        You might want to link to related issues here if you haven't already.
+        If similar functionality exists elsewhere, include any useful references.
+
+        Examples:
+        - Official Ragnarok Online
+        - Other emulators
+        - Community projects
+        - Documentation
+        - Screenshots
+        - Videos
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Add anything else that may help explain your proposal.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing Issues and Discussions before creating this request.
+          required: true
+        - label: I understand that submitting a suggestion does not guarantee it will be implemented.
+          required: true
+        - label: I confirm that the information provided is accurate to the best of my knowledge.
+          required: true
