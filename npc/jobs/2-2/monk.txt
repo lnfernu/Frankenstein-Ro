@@ -54,9 +54,9 @@ prt_monk,59,247,1	script	Guarding Monk#mk	120,6,2,{
 			end;
 		}
 		mes "[Tohobu]";
-		mes "Hmm..." + strcharinfo(0) + "é o seu nome?";
+		mes "Hmm..." + strcharinfo(0) + " é o seu nome?";
 		mes "...eu disse corretamente?";
-		mes "Certo, e seu nível de classe é" + JobLevel + "correto?";
+		mes "Certo, e seu nível de classe é (" + JobLevel + ") correto?";
 		next;
 		mes "[Tohobu]";
 		mes "Muito bem... por que você veio aqui?";

@@ -50,7 +50,7 @@ prt_church,16,41,4	script	High Bishop#prst	60,{
 			mes "[Bishop Paul]";
 			mes "Ah...";
 			if (Sex == SEX_MALE)
-				mes "É bom vê-lo novamente, irmão" + strcharinfo(0) + ". Mais uma vez, a graça de Deus fez com que nossos caminhos se cruzassem.";
+				mes "É bom vê-lo novamente, irmão " + strcharinfo(0) + ". Mais uma vez, a graça de Deus fez com que nossos caminhos se cruzassem.";
 			else
 				mes "É bom vê-la novamente, irmã" + strcharinfo(0) + ". A graça de Deus trouxe você mais uma vez à minha presença.";
 			next;
@@ -245,7 +245,7 @@ prt_church,16,41,4	script	High Bishop#prst	60,{
 				setquest 8009;
 					mes "[Bishop Paul]";
 				if (Sex == SEX_MALE)
-					mes "Agora vou explicar os Três Testes do Sacerdócio. Essas tribulações trarão muito sofrimento, mas espero que você possa completá-los, meu Irmão." + strcharinfo(0) + ".";
+					mes "Agora vou explicar os Três Testes do Sacerdócio. Essas tribulações trarão muito sofrimento, mas espero que você possa completá-los, meu Irmão " + strcharinfo(0) + ".";
 				else
 					mes "Agora vou explicar os Três Testes do Sacerdócio. Essas tribulações trarão muito sofrimento, mas espero que você possa completá-los, minha Irmã." + strcharinfo(0) + ".";
 				next;
@@ -536,7 +536,7 @@ prt_church,27,24,1	script	Sister Cecilia	79,{
 	mes "[Sister Cecilia]";
 	if (BaseJob != Job_Acolyte) {
 		if (BaseJob == Job_Priest) {
-			mes "Que Deus o abençoe,"+ (Sex == SEX_MALE ? "irmão":"irmã") +". Traz alegria ao meu coração ver que você está trabalhando duro para realizar a vontade de Deus.";
+			mes "Que Deus o abençoe, "+ (Sex == SEX_MALE ? "irmão":"irmã") +". Traz alegria ao meu coração ver que você está trabalhando duro para realizar a vontade de Deus.";
 		} else if (Class == Job_Novice) {
 			mes "Que Deus o abençoe,"+ (Sex == SEX_MALE ? "irmão":"irmã") +".";
 			mes "A paróquia de Prontera lhe dá as boas-vindas.";
@@ -705,16 +705,16 @@ prt_church,27,24,1	script	Sister Cecilia	79,{
 		next;
 		mes "[Sister Cecilia]";
 		if (Sex == SEX_MALE)
-			mes "Irmão"+ strcharinfo(0) +"...";
+			mes "Irmão "+ strcharinfo(0) +"...";
 		else
-			mes "Irmã"+ strcharinfo(0) +"...";
+			mes "Irmã "+ strcharinfo(0) +"...";
 		mes "Agora começaremos seu juramento formal ao sacerdócio. Sinta-se à vontade e apenas responda com o seu coração.";
 		next;
 		mes "[Sister Cecilia]";
 		if (Sex == SEX_MALE)
-			mes "Irmão"+ strcharinfo(0) +",";
+			mes "Irmão "+ strcharinfo(0) +",";
 		else
-			mes "Irmã"+ strcharinfo(0) +",";
+			mes "Irmã "+ strcharinfo(0) +",";
 		mes "Você está disposto";
 		mes "a entregar sua vida a Deus?";
 		next;
@@ -803,10 +803,10 @@ prt_church,27,24,1	script	Sister Cecilia	79,{
 		}
 		mes "[Sister Cecilia]";
 		if (Sex == SEX_MALE)
-			mes "Irmão"+ strcharinfo(0) +"...";
+			mes "Irmão "+ strcharinfo(0) +"...";
 		else
-			mes "Irmã"+ strcharinfo(0) +"...";
-		mes "Você demonstrou sua devoção a Deus. Você jura aderir aos ensinamentos d'Ele pelo resto dos seus dias?";
+			mes "Irmã "+ strcharinfo(0) +"...";
+		mes "Você demonstrou sua devoção a Deus. Você jura aderir aos ensinamentos d'ele pelo resto dos seus dias?";
 		next;
 		if (select("Eu juro.:Não.") == 1) {
 			set PRIEST_Q,9;
@@ -849,9 +849,9 @@ job_prist,24,187,4	script	Peter S. Alberto	110,{
 	if (BaseJob == Job_Priest) {
 		mes "Bem-vindo!";
 		if (Sex == SEX_MALE)
-			mes "Irmão"+ strcharinfo(0) +"!";
+			mes "Irmão "+ strcharinfo(0) +"!";
 		else
-			mes "Irmã"+ strcharinfo(0) +"!";
+			mes "Irmã "+ strcharinfo(0) +"!";
 		mes "É muito bom ver você novamente!";
 		next;
 		mes "[Father Peter]";
@@ -1038,9 +1038,9 @@ job_prist,23,187,1	script	Peter S. Alberto#2	110,{
 	if (BaseJob == Job_Priest) {
 		mes "Bem-vindo!";
 		if (Sex == SEX_MALE)
-			mes "Irmão"+ strcharinfo(0) +"!";
+			mes "Irmão "+ strcharinfo(0) +"!";
 		else
-			mes "Irmã"+ strcharinfo(0) +"!";
+			mes "Irmã "+ strcharinfo(0) +"!";
 		mes "É muito bom ver você!";
 		next;
 		mes "[Father Peter]";
