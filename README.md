@@ -185,17 +185,11 @@ with compatibility adjustments for the current version of rAthena.
 
 ## 2026-01-07 Ragexe ClientInfo + WARP
 
-Author:
+Author: VictorHug0
 
-VictorHug0
+Reference: https://rathena.org/board/topic/149414-2026-01-07-ragexe-clientinfo-warp/
 
-Reference:
-
-https://rathena.org/board/topic/149414-2026-01-07-ragexe-clientinfo-warp/
-
-Profile:
-
-https://rathena.org/board/profile/22192-victorhug0/
+Profile: https://rathena.org/board/profile/22192-victorhug0/
 
 Used for:
 
@@ -265,13 +259,9 @@ Modifications:
 
 ## Server Monitor 2.2.6
 
-Author:
+Author: DarkIrata
 
-DarkIrata
-
-Reference:
-
-https://rathena.org/board/files/file/2433-server-monitor/
+Reference: https://rathena.org/board/files/file/2433-server-monitor/
 
 Used for:
 
