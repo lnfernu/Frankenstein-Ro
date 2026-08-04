@@ -108,18 +108,26 @@ Contributing to the project does not create any expectation of permanent mainten
 
 # Project Continuity
 
-Frankenstein RO is an experimental project created for research, learning and development purposes.
+Frankenstein RO is an experimental project created from curiosity, research and the desire to understand how different Ragnarok Online technologies and systems can work together.
 
-The project may:
+The main objective of this project is exploration, learning and documentation of the development process.
 
-* Receive updates;
-* Change direction;
-* Remain inactive for periods of time;
-* Be archived in the future.
+This project does not have a commitment to continuously follow:
 
-There is no guarantee of continuous development, permanent maintenance or long-term availability.
+* New rAthena versions;
+* New official episodes;
+* New classes;
+* New quests;
+* New content releases;
+* Continuous feature additions.
 
-The objective is to preserve knowledge, experiments and references created during the project's development.
+Future changes will only happen if they are part of the project's current research goals or if the maintainer decides to continue exploring new ideas.
+
+The lifespan of Frankenstein RO is not defined by a fixed schedule, but by the continuation of interest, curiosity and motivation behind the project.
+
+When the learning objectives and personal curiosity behind the project are complete, the project may enter an inactive state or be archived.
+
+The purpose of this repository is to preserve knowledge, experiments, references and technical discoveries made during its development.
 
 ---
 
