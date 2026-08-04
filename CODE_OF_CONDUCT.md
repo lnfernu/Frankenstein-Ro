@@ -1,126 +1,170 @@
-# Contributor Covenant Code of Conduct
+# Code of Conduct
 
 ## Our Pledge
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, religion, or sexual identity
-and orientation.
+Frankenstein RO is an experimental open-source project focused on Ragnarok Online server development, research, customization, integration and learning.
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+This project exists to share knowledge, experiments, discoveries and technical approaches with the Ragnarok Online development community.
 
-## Our Standards
+All participants, contributors and visitors are expected to maintain a respectful, constructive and collaborative environment.
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+We encourage:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the
-  overall community
+* Knowledge sharing;
+* Technical discussions;
+* Different approaches and ideas;
+* Constructive feedback;
+* Collaboration between community members.
+
+Everyone participating in this project should contribute to an environment where people can learn, discuss and share experiences respectfully.
+
+---
+
+# Our Standards
+
+Examples of positive behavior include:
+
+* Treating other participants with respect.
+* Sharing technical information in a constructive way.
+* Helping other users when possible.
+* Explaining problems clearly and providing useful details.
+* Respecting different levels of technical experience.
+* Accepting that different solutions may exist for the same problem.
 
 Examples of unacceptable behavior include:
 
-* The use of sexualized language or imagery, and sexual attention or
-  advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email
-  address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+* Personal attacks or harassment.
+* Offensive, discriminatory or disrespectful behavior.
+* Sharing private information without permission.
+* Deliberately misleading information.
+* Malicious contributions or attempts to damage the project.
+* Creating unnecessary conflicts in discussions.
 
-## Enforcement Responsibilities
+---
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+# Community Discussions and Support
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+Frankenstein RO provides public spaces for discussion, questions and collaboration.
 
-## Scope
+Users are welcome to:
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, posting on the forums with an account in a Staff group, or acting as an appointed representative at an online or offline event.
+* Ask questions;
+* Report problems;
+* Share solutions;
+* Discuss ideas;
+* Suggest improvements.
 
-## Enforcement
+Questions and discussions are open to the entire community.
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement via
-the Report Center on our forums. All complaints will be reviewed and investigated promptly and fairly.
+Responses may come from:
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+* Other users;
+* Contributors;
+* Community members;
+* The project maintainer when available.
 
-## Enforcement Guidelines
+The project maintainer is not the only source of assistance and does not guarantee that every question will receive a direct response.
 
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
+The purpose of public discussions is to create a knowledge base that can help current and future users.
 
-### 1. Correction
+---
 
-**Community Impact**: Use of inappropriate language or other behavior deemed
-unprofessional or unwelcome in the community.
+# Support Scope
 
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. In the event that a user is uncontactable through normal means, the offending content will be hidden. A second infraction from a user with no means of communication will result in immediate Temporary Ban. See section 3.
+Frankenstein RO is developed and maintained as an independent personal project.
 
-### 2. Warning
+The project does not provide:
 
-**Community Impact**: A violation through a single incident or series
-of actions.
+* Private technical support;
+* Private troubleshooting;
+* Consulting services;
+* Individual development assistance;
+* Guaranteed response times.
 
-**Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved, including unsolicited interaction with
-those enforcing the Code of Conduct, for a specified period of time. This
-includes avoiding interactions in community spaces as well as external channels
-like social media. Violating these terms may lead to a temporary or
-permanent ban.
+Questions and requests should be made through the official public project channels.
 
-### 3. Temporary Ban
+The project maintainer also does not provide development support or participate as a developer in unrelated third-party projects.
 
-**Community Impact**: A serious violation of community standards, including
-sustained inappropriate behavior.
+Keeping discussions public allows information, solutions and discoveries to remain available for the entire community.
 
-**Consequence**: A temporary ban from any sort of interaction or public
-communication with the community for a specified period of time. No public or
-private interaction with the people involved, including unsolicited interaction
-with those enforcing the Code of Conduct, is allowed during this period.
-Violating these terms may lead to a permanent ban.
+---
 
-### 4. Permanent Ban
+# Project Contributions
 
-**Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior,  harassment of an
-individual, or aggression toward or disparagement of classes of individuals.
+Contributions, suggestions and discussions are welcome.
 
-**Consequence**: A permanent ban from any sort of public interaction within
-the community.
+However, participants should understand that:
 
-## Attribution
+* Frankenstein RO is maintained independently.
+* The project maintainer may have limited availability.
+* Reviews and decisions depend on available time and project priorities.
+* Not every suggestion or contribution will be accepted.
+* Some ideas may not match the project's goals or technical direction.
+* Compatibility, stability and maintainability will be considered before accepting changes.
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
-https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+Contributing to the project does not create any expectation of permanent maintenance, personal assistance or future development commitment.
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct
-enforcement ladder](https://github.com/mozilla/diversity).
+---
 
-[Contributor Covenant](https://www.contributor-covenant.org)
+# Project Continuity
 
-For answers to common questions about this code of conduct, see the FAQ at
-https://www.contributor-covenant.org/faq. Translations are available at
-https://www.contributor-covenant.org/translations.
+Frankenstein RO is an experimental project created for research, learning and development purposes.
+
+The project may:
+
+* Receive updates;
+* Change direction;
+* Remain inactive for periods of time;
+* Be archived in the future.
+
+There is no guarantee of continuous development, permanent maintenance or long-term availability.
+
+The objective is to preserve knowledge, experiments and references created during the project's development.
+
+---
+
+# Issues and Discussions Guidelines
+
+Before opening an Issue or Discussion:
+
+* Search existing discussions first.
+* Provide clear information about the problem or suggestion.
+* Include logs, screenshots, videos or reproduction steps when applicable.
+* Mention custom modifications and environment details.
+* Explain what was expected and what actually happened.
+
+Reports without enough information may not be possible to investigate.
+
+---
+
+# Enforcement
+
+The project maintainer reserves the right to:
+
+* Request additional information;
+* Close discussions that are unrelated or unproductive;
+* Reject contributions that do not match the project direction;
+* Remove content that violates this Code of Conduct.
+
+Actions will be taken with the objective of protecting the project, its contributors and the quality of discussions.
+
+---
+
+# Scope
+
+This Code of Conduct applies to:
+
+* GitHub Issues;
+* GitHub Discussions;
+* Pull Requests;
+* Other official Frankenstein RO communication channels.
+
+---
+
+# Attribution
+
+This Code of Conduct is inspired by the Contributor Covenant Code of Conduct version 2.0:
+
+https://www.contributor-covenant.org/version/2/0/code_of_conduct.html
+
+Adapted specifically for the Frankenstein RO project.
