@@ -4181,11 +4181,11 @@ moc_para01,112,79,3	script	Weapons Expert BK#2nd11	4_M_REPAIR,{
 				mes "Você não pode mudar de ideia depois, então escolha com sabedoria.";
 				next;
 				if (select( "ATQ +3%","MATQ +3%" ) == 1) {
-					.@string$ = "Ok, you've chosen to raise physical attack.";
+					.@string$ = "Certo, você escolheu aumentar o ataque físico.";
 					.@card = 4767;
 				}
 				else {
-					.@string$ = "Ok, you've chosen to raise magical attack.";
+					.@string$ = "Certo, você escolheu aumentar o ataque mágico.";
 					.@card = 4806;
 					.@add = 1;
 				}
