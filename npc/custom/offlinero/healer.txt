@@ -40,43 +40,10 @@
 	}
 
 	if (.@Buffs) {
-		skilleffect 384,0; sc_start SC_MELTDOWN,7200000,5;
-		skilleffect 383,0; sc_start SC_WINDWALK,7200000,5;
-		skilleffect 378,0; sc_start SC_EDP,7200000,5;
-		skilleffect 465,0; sc_start SC_KAITE,7200000,7;
-		skilleffect 464,0; sc_start SC_KAUPE,7200000,3;
-		skilleffect 463,0; sc_start SC_KAAHI,7200000,7;
-		skilleffect 462,0; sc_start SC_KAIZEL,7200000,7;
-		skilleffect 8,0; sc_start SC_ENDURE,7200000,10;
-		skilleffect 33,0; sc_start SC_ANGELUS,7200000,10;
-		skilleffect 45,0; sc_start SC_CONCENTRATE,7200000,10;
-		skilleffect 74,0; sc_start SC_MAGNIFICAT,7200000,5;
-		skilleffect 75,0; sc_start SC_GLORIA,7200000,5;
-		skilleffect 459,0; sc_start SC_ADRENALINE2,7200000,1;
-		skilleffect 66,0; sc_start SC_IMPOSITIO,7200000,5;
-		skilleffect 67,0; sc_start SC_SUFFRAGIUM,7200000,3;
-		skilleffect 34,0; sc_start SC_BLESSING,7200000,10;
-		skilleffect 29,0; sc_start SC_INCREASEAGI,7200000,10;
-		skilleffect 112,0; sc_start SC_WEAPONPERFECTION,7200000,10;
-		skilleffect 113,0; sc_start SC_OVERTHRUST,7200000,5;
-		skilleffect 114,0; sc_start SC_MAXIMIZEPOWER,7200000,5;
-		skilleffect 357,0; sc_start SC_CONCENTRATION,7200000,5;
-		skilleffect 355,0; sc_start SC_AURABLADE,7200000,5;
-		skilleffect 155,0; sc_start SC_LOUD,7200000,1;
-		skilleffect 157,0; sc_start SC_ENERGYCOAT,7200000,1;
-		sc_start SC_ASPDPOTION2,7200000,0;
-		sc_start SC_STRFood,7200000,10;
-		sc_start SC_AGIFood,7200000,10;
-		sc_start SC_VITFood,7200000,10;
-		sc_start SC_INTFood,7200000,10;
-		sc_start SC_DEXFood,7200000,10;
-		sc_start SC_LUKFood,7200000,10;
-		sc_start SC_HitFood,7200000,30;
-		sc_start SC_FleeFood,7200000,30;
-		sc_start SC_BATKFood,7200000,10;
-		sc_start SC_MATKFood,7200000,10;
-		skilleffect 380,0; sc_start SC_TRUESIGHT,7200000,5;
-		skilleffect 361,0; sc_start SC_ASSUMPTIO,7200000,5;
+		specialeffect2 EF_INCAGILITY;
+		sc_start SC_INCREASEAGI,240000,10;
+		specialeffect2 EF_BLESSING;
+		sc_start SC_BLESSING,240000,10;
 	}
 	if (.@Delay)
 		@HD = gettimetick(2) + .@Delay;
