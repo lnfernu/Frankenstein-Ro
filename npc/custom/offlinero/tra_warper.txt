@@ -6,30 +6,30 @@
 
 prontera,168,177,2	script	Hector	1_m_knightmaster,{
 	mes "[Hector]";
-	mes "I can teleport you to the special training area";
+	mes "Posso teletransportar você para a área de treinamento especial.";
 	next;
-	switch(select("Yes, warp me!:Info")) {
+	switch(select("Sim, teletransporte-me!:Informações")) {
 		case 1:
 			mes "[Hector]";
-			mes "Good luck, find my brother if you want comeback~";
+			mes "Boa sorte; encontre meu irmão se quiser voltar~";
 			close2;
 			warp "tra_fild02",110,96;
 			end;
 		case 2:
 			mes "[Hector]";
-			mes "Very safe area, lv. 100 dummies.";
+			mes "Área muito segura, bonecos de treino nível 100.";
 			close;
 	}
 }
 
 tra_fild02,202,114,4	script	Hecator	4_M_EDEN_GUARDER,{
 	mes "[Hecator]";
-	mes "Done training? Wanna rest?";
+	mes "Terminou o treino? Quer descansar?";
 	next;
-	switch(select("Yes, warp me!:Nah, I am still training my skill")) {
+	switch(select("Sim, me teletransporta!: Não, ainda estou treinando minha habilidade")) {
 		case 1:
 			mes "[Hecator]";
-			mes "Great! Bye~";
+			mes "Ótimo! Tchau!";
 			close2;
 			warp "prontera",155,185;
 			end;
@@ -40,12 +40,12 @@ tra_fild02,202,114,4	script	Hecator	4_M_EDEN_GUARDER,{
 
 tra_fild02,17,114,5	script	Heciator	4_M_EDEN_GUARDER,{
 	mes "[Heciator]";
-	mes "Done training? Wanna rest?";
+	mes "Terminou o treino? Quer descansar?";
 	next;
-	switch(select("Yes, warp me!:Nah, I am still training my skill")) {
+	switch(select("Sim, me teletransporta!: Não, ainda estou treinando minha habilidade")) {
 		case 1:
 			mes "[Heciator]";
-			mes "Great! Bye~";
+			mes "Ótimo! Tchau!";
 			close2;
 			warp "prontera",155,185;
 			end;

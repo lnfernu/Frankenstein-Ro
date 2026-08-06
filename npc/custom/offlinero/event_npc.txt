@@ -1,15 +1,15 @@
 casp_in01,178,276,4	script	Gatcha Girl	4_F_PINKWOMAN,{
     mes "[Gatcha Girl]";
-    mes "Hello, I have something that might interest you. Care to check my stuff?";
+    mes "Olá, tenho algo que pode lhe interessar. Gostaria de dar uma olhada no meu trabalho?";
     next;
     switch(select("Open Shop:Cancel")) {
         case 1:
-            close2; // Tutup dialog sebelum membuka shop
-            callshop "gatcha_met", 1; // Membuka barter shop
+            close2; // Feche a caixa de diálogo antes de abrir a loja.
+            callshop "gatcha_met", 1; // Abrir uma loja de trocas
             end; //
         case 2:
             mes "[Gatcha Girl]";
-            mes "Come back when you're ready to trade!";
+            mes "Volte quando estiver pronto para negociar!";
             close; //
     }
 }

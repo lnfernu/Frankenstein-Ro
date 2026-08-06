@@ -13,14 +13,14 @@
     OnInit:
         OnTimer1800000: // Every 30 minutes (1800 seconds)
         initnpctimer;
-        announce "Proceed with caution when enchanting! Graded equipment can be reset.", 0;
+        announce "Proceda com cautela ao realizar encantamentos! Equipamentos com graduação podem ter seus atributos resetados.", 0;
         sleep 360000; // 6 minutes
-        announce "Visit Caspen Town for a New Adventure!", 0;
+        announce "Visite Caspen Town para uma nova aventura!", 0;
         sleep 360000; // 6 minutes
-        announce "Explore Devoured Geffenia for a Thrilling Adventure!", 0, 0xf7be6e;
+        announce "Explore Devoured Geffenia para uma aventura emocionante!", 0, 0xf7be6e;
         sleep 360000; // 6 minutes
-        announce "Want a powerful and fierce pet? Seek the Pet Master in Prontera!", 0;
+        announce "Quer um mascote poderoso e feroz? Procure o Mestre dos Mascotes em Prontera!", 0;
         sleep 360000; // 6 minutes
-        announce "Looking for costumes, equipment, or shadow equipment? Visit Prontera Market!", 0;
+        announce "Procurando por trajes, equipamentos ou equipamentos de sombra? Visite o Mercado de Prontera!", 0;
         end;
 }
