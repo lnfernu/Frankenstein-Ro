@@ -1,0 +1,14 @@
+moc_para01,52,38,3	script	[DEBUG] Limpar Quests Eden	111,{
+	mes "[DEBUG - Limpar Quests do Eden]";
+	next;
+	mes "Tem certeza que quer remover TODAS as quests do Grupo Eden (99001+)?";
+	next;
+	if (select("Sim:Não") == 1) {
+		for (.@i = 99001; .@i <= 99393; .@i++) {
+			erasequest .@i;
+		}
+		mes "Todas as quests do Eden foram limpas!";
+		close;
+	}
+	close;
+}

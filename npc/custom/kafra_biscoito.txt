@@ -1,0 +1,59 @@
+// --- O NPC de Diálogo e Animação Integrados ---
+moc_para01,44,22,4	script	Kafra dos Biscoitos	4_F_KAFRA8,{
+
+    mes "[Kafra dos Biscoitos]";
+    mes "Olá, essa é uma data muito especial!";
+    mes "É tempo de cozinhar!";
+    next;
+    
+    switch(select("Cozinhar!:Ignorar")) {
+        case 1:
+            mes "[Kafra dos Biscoitos]";
+            mes "Uauuu, você já é membro de nosso";
+            mes "grupo?";
+            next;
+            
+            switch(select("Saborear!:Não gosto de Biscoitos...")) {
+                case 1:
+                    mes "[Kafra dos Biscoitos]";
+                    mes "Venha! Tente esses biscoitos! É uma";
+                    mes "receita nova de Orleans!";
+                    next;
+                    
+                    // --- LÓGICA DE BUFFS E CURA ---
+                    sc_end SC_ALL;
+                    percentheal 100, 100;
+                    
+                    set .@duracao, 3600000;
+                    sc_start SC_INCREASEAGI, .@duracao, 10;
+                    sc_start SC_BLESSING, .@duracao, 10;
+                    sc_start SC_ASSUMPTIO, .@duracao, 5;
+                    sc_start2 SC_S_LIFEPOTION, .@duracao,-5,5;
+                    sc_start2 SC_S_MANAPOTION, .@duracao,-5,5;
+                    
+                    mes "*(Você sente o gosto do biscoito e uma onda de energia percorre seu corpo!)*";
+                    close;
+                    
+                case 2:
+                    mes "[Kafra dos Biscoitos]";
+                    mes "Oh... que pena. Espero que mude de ideia em breve!";
+                    close;
+            }
+        case 2:
+            mes "[Kafra dos Biscoitos]";
+            mes "Entendido. A culinária não é para todos. Tenha um bom dia!";
+            close;
+    }
+
+OnInit:
+    // Inicia o timer interno do próprio NPC assim que o servidor liga
+    initnpctimer;
+    end;
+
+OnTimer5000:
+    // Envia o efeito visual do coração na coordenada exata do NPC (X: 44, Y: 22)
+    // O ID do efeito visual do coração no Ragnarok é o 327 (EF_HEART)
+    emotion 3;
+    initnpctimer;
+    end;
+}
