@@ -111,7 +111,7 @@ prt_in,24,61,7	script	Perchik	47,{
 	}
 	mes "[Perchik]";
 	if (Zeny < .@price || .@nr) {
-		mes "Eu não trabalho por um "obrigado".";
+		mes "Eu não trabalho por um...obrigado.";
 		emotion ET_SORRY;
 		close;
 	}
