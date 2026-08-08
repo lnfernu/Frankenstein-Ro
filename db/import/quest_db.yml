@@ -1,0 +1,1523 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Quest Database
+###########################################################################
+#
+# Quest Settings
+#
+###########################################################################
+# - Id                     Quest ID.
+#   Title                  Quest title.
+#   TimeLimit              Amount of time before the quest expires. (Default: 0)
+#   Targets:               Quest objective target. (Default: null)
+#     - Mob                Name of monster to kill.
+#       Count              Amount of monsters to kill. Set to 0 to skip the target on import.
+#       Id                 Unique target index for the quest Id. Requires a positive number.
+#       Race               Monster race target. (Default: All)
+#       Size               Monster size target. (Default: All)
+#       Element            Monster element target. (Default: All)
+#       MinLevel           Minimum monster level target. If not supplied but MaxLevel defined, MinLevel is 1. Set to 0 to ignore MinLevel on import. (Default: 0)
+#       MaxLevel           Maximum monster level target. Set to 0 to ignore MaxLevel on import. (Default: 0)
+#       Location           Map name where kills are counted. (Default: All)
+#       MapName            Displayed map name in quest UI. (Default: empty string)
+#       MapMobTargets      List of monster names. Only names in the list will increase the kill counter. Only active when Id is used. (Default: all monsters)
+#         <name>: <bool>   Monster name and whether the monster is added or removed from the list.
+#   Drops:                 Quest item drop targets. (Default: null)
+#     - Mob                Monster to kill. 0 will apply to all monsters. (Default: 0)
+#       Item               Item to drop.
+#       Count              Amount of items that will drop. Non-stackable items default to 1. (Default: 1)
+#       Rate               Item drop rate. (10000 = 100%)
+###########################################################################
+
+Header:
+  Type: QUEST_DB
+  Version: 3
+
+Body:
+  - Id: 5961
+    Title: "[Standby] The Devil's Meal"
+    TimeLimit: 4h
+  - Id: 5962
+    Title: Devil's Breakfast
+    Targets:
+      - Id: 1
+        Count: 100
+        Location: clock_01
+        MapMobTargets:
+          EXTRA_JOKER: true
+          ERZSEBET: true
+          JENIFFER: true
+          GENERAL_ORC: true
+          SIEGLOUSE: true
+  - Id: 5963
+    Title: Devil's Lunch
+    Targets:
+      - Id: 1
+        Count: 300
+        Location: clock_01
+        MapMobTargets:
+          EXTRA_JOKER: true
+          ERZSEBET: true
+          JENIFFER: true
+          GENERAL_ORC: true
+          SIEGLOUSE: true
+  - Id: 5964
+    Title: Devil's Dinner
+    Targets:
+      - Id: 1
+        Count: 1000
+        Location: clock_01
+        MapMobTargets:
+          EXTRA_JOKER: true
+          ERZSEBET: true
+          JENIFFER: true
+          GENERAL_ORC: true
+          SIEGLOUSE: true
+  - Id: 5965
+    Title: "[Standby] Devil's Special"
+    TimeLimit: Monday 4h
+  - Id: 5966
+    Title: Devil's Special
+    Targets:
+      - Id: 1
+        Count: 5000
+        Location: clock_01
+        MapMobTargets:
+          EXTRA_JOKER: true
+          ERZSEBET: true
+          JENIFFER: true
+          GENERAL_ORC: true
+          SIEGLOUSE: true
+  - Id: 5967
+    Title: "[Standby] Devil's Snack"
+    TimeLimit: 4h
+  - Id: 5968
+    Title: "[Standby] Devil's Pet Mimic"
+    TimeLimit: 4h
+  - Id: 5969
+    Title: Food for Pet Mimic
+  - Id: 5970
+    Title: Delivery of food (?) completed
+  - Id: 5971
+    Title: Devil in the box
+  - Id: 5972
+    Title: Eagle Patrol
+  - Id: 5973
+    Title: "[Standby] Patrol with Iwin"
+    TimeLimit: 4h
+  - Id: 5974
+    Title: Patrol with Iwin (1)
+  - Id: 5975
+    Title: Patrol with Iwin (2)
+  - Id: 5976
+    Title: Supplier Goror
+  - Id: 5977
+    Title: "[Standby] Do not feed"
+    TimeLimit: 4h
+  - Id: 5978
+    Title: Do not feed me (1)
+  - Id: 5979
+    Title: Do not feed me (2)
+  - Id: 5980
+    Title: Secret fun
+  - Id: 5981
+    Title: "[Standby] Secret Fun"
+    TimeLimit: 4h
+  - Id: 5982
+    Title: Secret fun
+  - Id: 5983
+    Title: Test Subject 210426 Encounter
+  - Id: 5984
+    Title: Rgan Transformation Scroll
+  - Id: 5985
+    Title: "[Standby] Lunch menu selection"
+    TimeLimit: 4h
+  - Id: 5986
+    Title: Lunch's menu selection
+  - Id: 5987
+    Title: Lunch's menu selection
+  - Id: 5988
+    Title: Lunch's menu selection
+  - Id: 5989
+    Title: Lunch's menu selection
+  - Id: 5990
+    Title: Lunch's menu selection
+  - Id: 5991
+    Title: Lunch's menu selection
+  - Id: 5992
+    Title: Lunch's menu selection
+  - Id: 5993
+    Title: Lunch's menu selection
+  - Id: 5994
+    Title: Lunch's menu selection
+  - Id: 5995
+    Title: Lunch's menu selection
+    - Id: 8784
+    Title: Help Moryara Fishing
+    Targets:
+      - Mob: EP19_SHINING_SEAWEED
+        Count: 20
+  - Id: 8785
+    Title: Moryara's Fishing Help - Standby
+    TimeLimit: 4h
+  - Id: 8786
+    Title: Help Moryara Fishing
+    Targets:
+      - Mob: EP19_SHINING_SEAWEED
+        Count: 20
+  - Id: 8787
+    Title: Lunch time with Zoryara
+  - Id: 8788
+    Title: Happy Lunch with Zoryara - Standby
+    TimeLimit: 4h
+  - Id: 8789
+    Title: Lunch time with Zoryara
+  - Id: 8790
+    Title: Priest, have mercy?
+  - Id: 8791
+    Title: Priest, have mercy? - Wait
+    TimeLimit: 4h
+  - Id: 8792
+    Title: Priest, have mercy??
+  - Id: 8793
+    Title: Things to ask
+  - Id: 8794
+    Title: Old Snake
+  - Id: 8795
+    Title: Doctrine and Preaching
+  - Id: 8796
+    Title: You're the first girl I've ever seen
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 20
+  - Id: 8797
+    Title: Rgan to work-Standby
+    TimeLimit: 4h
+  - Id: 8798
+    Title: Rgan to make work
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 20
+  - Id: 8799
+    Title: Hatchery's Rgan (1)
+  - Id: 8800
+    Title: Hatchery's Rgan (2)
+  - Id: 8801
+    Title: Hatchery's Rgan (3)
+  - Id: 8802
+    Title: The 1st Rgan in the Hatchery
+  - Id: 8803
+    Title: Hatchery's 2nd Rgan
+  - Id: 8804
+    Title: The 3rd Rgan in the Hatchery
+    - Id: 11794
+    Title: The Lady of Purification
+  - Id: 11795
+    Title: The Lady of Purification
+  - Id: 11796
+    Title: The Lady of Purification
+  - Id: 11797
+    Title: The Lady of Purification
+  - Id: 11798
+    Title: The Lady of Purification
+  - Id: 11799
+    Title: The Lady of Purification
+  - Id: 11800
+    Title: The Lady of Purification
+  - Id: 11801
+    Title: The Lady of Purification
+  - Id: 11802
+    Title: The Lady of Purification
+  - Id: 11803
+    Title: The Lady of Purification
+  - Id: 11804
+    Title: The Lady of Purification
+  - Id: 11805
+    Title: The Lady of Purification
+  - Id: 11806
+    Title: The Lady of Purification
+  - Id: 11807
+    Title: The Lady of Purification
+  - Id: 11808
+    Title: The Lady of Purification
+  - Id: 11809
+    Title: The Lady of Purification
+  - Id: 11810
+    Title: The Lady of Purification
+  - Id: 11811
+    Title: The Lady of Purification
+  - Id: 11812
+    Title: Friederike's Day
+  - Id: 11813
+    Title: Friederike's Day
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 10
+      - Mob: EP19_RGAN_B
+        Count: 10
+    Drops:
+      - Mob: EP19_RGAN_A
+        Item: Ep19_Rgan_Core
+        Rate: 5000
+      - Mob: EP19_RGAN_B
+        Item: Ep19_Rgan_Core
+        Rate: 5000
+  - Id: 11814
+    Title: Friederike's Day - Standby
+    TimeLimit: 4h
+  - Id: 11815
+    Title: Frozen Sea
+  - Id: 11816
+    Title: Frozen Sea
+  - Id: 11817
+    Title: Frozen Sea
+  - Id: 11818
+    Title: Frozen Sea
+  - Id: 11819
+    Title: Frozen Sea
+  - Id: 11820
+    Title: Frozen Sea
+  - Id: 11821
+    Title: Frozen Sea
+  - Id: 11822
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 10
+        Location: jor_back2
+        MapMobTargets:
+          EP19_UNFROST_FLOWER: true
+          EP19_ICE_GANGU: true
+          EP19_ICE_STRAW: true
+          EP19_LIMACINA: true
+    Drops:
+      - Mob: EP19_UNFROST_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ICE_GANGU
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ICE_STRAW
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_LIMACINA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11823
+    Title: Frozen Sea
+  - Id: 11824
+    Title: Frozen Sea
+  - Id: 11825
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 5
+        Location: jor_ab01
+        MapMobTargets:
+          EP19_WASTED_RGAN_A: true
+          EP19_CAVE_CALMARING: true
+          EP19_CAVE_FLOWER: true
+          EP19_HALLUCIGENIA_BABY: true
+          EP19_RE_RGAN_E: true
+    Drops:
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11826
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 5
+        Location: jor_ab01
+        MapMobTargets:
+          EP19_WASTED_RGAN_A: true
+          EP19_CAVE_CALMARING: true
+          EP19_CAVE_FLOWER: true
+          EP19_HALLUCIGENIA_BABY: true
+          EP19_RE_RGAN_E: true
+    Drops:
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11827
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 5
+        Location: jor_ab01
+        MapMobTargets:
+          EP19_WASTED_RGAN_A: true
+          EP19_CAVE_CALMARING: true
+          EP19_CAVE_FLOWER: true
+          EP19_HALLUCIGENIA_BABY: true
+          EP19_RE_RGAN_E: true
+    Drops:
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11828
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 10
+        Location: jor_ab02
+        MapMobTargets:
+          EP19_WASTED_RGAN_C: true
+          EP19_HALLUCIGENIA: true
+          EP19_ONE_EYE_DOLLOCARIS: true
+          EP19_DOLLOCARIS: true
+          EP19_ET_RGAN_D: true
+    Drops:
+      - Mob: EP19_WASTED_RGAN_C
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ONE_EYE_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ET_RGAN_D
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11829
+    Title: Frozen Sea
+  - Id: 11830
+    Title: Abandoned Pit
+  - Id: 11831
+    Title: A place that deserves to be abandoned
+    Targets:
+      - Id: 1
+        Count: 40
+        Location: jor_ab01
+        MapMobTargets:
+          EP19_WASTED_RGAN_A: true
+          EP19_CAVE_CALMARING: true
+          EP19_CAVE_FLOWER: true
+          EP19_HALLUCIGENIA_BABY: true
+          EP19_RE_RGAN_E: true
+    Drops:
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11832
+    Title: Place to be abandoned (1) - Standby
+    TimeLimit: 4h
+  - Id: 11833
+    Title: A place that deserves to be abandoned
+    Targets:
+      - Id: 1
+        Count: 40
+        Location: jor_ab02
+        MapMobTargets:
+          EP19_WASTED_RGAN_C: true
+          EP19_HALLUCIGENIA: true
+          EP19_ONE_EYE_DOLLOCARIS: true
+          EP19_DOLLOCARIS: true
+          EP19_ET_RGAN_D: true
+    Drops:
+      - Mob: EP19_WASTED_RGAN_C
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ONE_EYE_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ET_RGAN_D
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11834
+    Title: Place to be Abandoned (2) - Standby
+    TimeLimit: 4h
+  - Id: 11835
+    Title: Digging and Digging
+  - Id: 11836
+    Title: Digging and Digging
+  - Id: 11837
+    Title: Digging and Digging
+  - Id: 11838
+    Title: Digging and Digging
+  - Id: 11839
+    Title: Digging and Digging
+  - Id: 11840
+    Title: Digging and Digging
+  - Id: 11841
+    Title: Digging and Digging
+  - Id: 11842
+    Title: Digging and Digging
+  - Id: 11843
+    Title: Digging and Digging
+  - Id: 11844
+    Title: Digging and Digging
+  - Id: 11845
+    Title: Digging and Digging
+  - Id: 11846
+    Title: Digging and Digging
+  - Id: 11847
+    Title: Digging and Digging
+  - Id: 11848
+    Title: Digging and Digging
+  - Id: 11849
+    Title: Digging and Digging
+  - Id: 11850
+    Title: Digging and Digging - Standby
+    TimeLimit: 4h
+  - Id: 11851
+    Title: Do you need a refrigerator?
+  - Id: 11852
+    Title: Do you need a refrigerator?
+    Targets:
+      - Id: 1
+        Count: 20
+        Location: jor_back2
+        MapMobTargets:
+          EP19_UNFROST_FLOWER: true
+          EP19_ICE_GANGU: true
+          EP19_ICE_STRAW: true
+          EP19_LIMACINA: true
+    Drops:
+      - Mob: EP19_UNFROST_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ICE_GANGU
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ICE_STRAW
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_LIMACINA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11853
+    Title: Do you need a refrigerator? - Standby
+    TimeLimit: 4h
+  - Id: 11854
+    Title: Crunchy Tools
+  - Id: 11855
+    Title: Crunchy Tools
+  - Id: 11856
+    Title: Crunchy Tools
+  - Id: 11857
+    Title: Crunchy Tools
+  - Id: 11858
+    Title: Crunchy Tools
+  - Id: 11859
+    Title: Crunchy Tools - Standby
+    TimeLimit: 4h
+  - Id: 12560
+    Title: Airship Sabotage - Wait
+    TimeLimit: +3d
+  - Id: 12561
+    Title: Core Disabling
+    Targets:
+      - Mob: EP19_MD_AQUILA
+        Count: 1
+  - Id: 16636
+    Title: Looking for clues - Juncea's Lab
+  - Id: 16637
+    Title: Find Clues - Bagot's Lab
+  - Id: 16638
+    Title: Find Clues - Rgan Guard
+  - Id: 16639
+    Title: Juncea's Lab
+  - Id: 16640
+    Title: Juncea's Lab
+  - Id: 16641
+    Title: Laboratory of Bagot
+  - Id: 16642
+    Title: Laboratory of Bagot
+  - Id: 16643
+    Title: Rgan Guard
+  - Id: 16644
+    Title: Rgan Guard
+  - Id: 16645
+    Title: Share the clue
+  - Id: 16646
+    Title: Infiltrate without a sound
+  - Id: 16647
+    Title: Infiltrate without a sound
+  - Id: 16648
+    Title: Infiltrate without a sound
+  - Id: 16649
+    Title: Infiltrate without a sound
+  - Id: 16650
+    Title: Infiltrate without a sound
+  - Id: 16651
+    Title: Infiltrate without a sound
+  - Id: 16652
+    Title: Infiltrate without a sound
+  - Id: 16653
+    Title: The Doubts That Build Up
+  - Id: 16654
+    Title: The Doubts That Build Up
+  - Id: 16655
+    Title: Intermittent difference
+  - Id: 16656
+    Title: Intermittent difference
+  - Id: 16657
+    Title: Intermittent difference
+  - Id: 16658
+    Title: Intermittent difference
+  - Id: 16659
+    Title: Intermittent difference
+  - Id: 16660
+    Title: Intermittent difference
+    Targets:
+      - Mob: EP19_MD_JUNCEA
+        Count: 1
+  - Id: 16661
+    Title: Intermittent difference
+  - Id: 16662
+    Title: Simulation Battle
+    Targets:
+      - Mob: EP19_MD_JUNCEA_S
+        Count: 1
+  - Id: 16663
+    Title: Simulation Battle-Standby
+    TimeLimit: 4h
+  - Id: 16734
+    Title: Guide to Varmundt's Deep Biosphere
+  - Id: 16735
+    Title: Deep 1st floor sample study
+    Targets:
+      - Id: 1
+        Count: 300
+        Location: bl_depth1
+        MapMobTargets:
+          BIO_ANOLIAN: true
+          BIO_DRAGON_TAIL: true
+          BIO_EMPATHIZER: true
+          BIO_FIRE_FRILLDORA: true
+          BIO_HOLY_FRUS: true
+          BIO_HOLY_SKOGUL: true
+          BIO_KAPHA: true
+          BIO_LAVA_TOAD: true
+          BIO_LITTLE_FATUM: true
+          BIO_PINGUICULA_D: true
+          BIO_POM_SPIDER: true
+          BIO_PRAY_GIVER: true
+          BIO_SKEL_ARCHER: true
+          BIO_SKEL_SOLDIER: true
+          BIO_STING: true
+          BIO_WOOD_GOBLIN: true
+  - Id: 16736
+    Title: Deep 1st floor sample study - Standby
+    TimeLimit: 4h
+  - Id: 16737
+    Title: Deep 1st floor sample deepening study
+    Targets:
+      - Id: 1
+        Count: 2000
+        Location: bl_depth1
+        MapMobTargets:
+          BIO_ANOLIAN: true
+          BIO_DRAGON_TAIL: true
+          BIO_EMPATHIZER: true
+          BIO_FIRE_FRILLDORA: true
+          BIO_HOLY_FRUS: true
+          BIO_HOLY_SKOGUL: true
+          BIO_KAPHA: true
+          BIO_LAVA_TOAD: true
+          BIO_LITTLE_FATUM: true
+          BIO_PINGUICULA_D: true
+          BIO_POM_SPIDER: true
+          BIO_PRAY_GIVER: true
+          BIO_SKEL_ARCHER: true
+          BIO_SKEL_SOLDIER: true
+          BIO_STING: true
+          BIO_WOOD_GOBLIN: true
+  - Id: 16738
+    Title: Deep 1st floor sample deepening study - Standby
+    TimeLimit: Monday 4h
+  - Id: 16739
+    Title: Deep 1st floor Fire sample study I
+    Targets:
+      - Mob: BIO_LAVA_TOAD
+        Count: 50
+      - Mob: BIO_FIRE_FRILLDORA
+        Count: 50
+  - Id: 16740
+    Title: Deep 1st floor Fire sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16741
+    Title: Deep 1st floor Fire sample study II
+    Targets:
+      - Mob: BIO_LAVA_TOAD
+        Count: 80
+      - Mob: BIO_FIRE_FRILLDORA
+        Count: 80
+  - Id: 16742
+    Title: Deep 1st floor Fire sample study II - Standby
+    TimeLimit: 4h
+  - Id: 16743
+    Title: Deep 1st floor Ice sample study I
+    Targets:
+      - Mob: BIO_ANOLIAN
+        Count: 50
+      - Mob: BIO_KAPHA
+        Count: 50
+  - Id: 16744
+    Title: Deep 1st floor Ice sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16745
+    Title: Deep 1st floor Ice sample study II
+    Targets:
+      - Mob: BIO_ANOLIAN
+        Count: 80
+      - Mob: BIO_KAPHA
+        Count: 80
+  - Id: 16746
+    Title: Deep 1st floor Ice sample study II - Standby
+    TimeLimit: 4h
+  - Id: 16747
+    Title: Deep 1st floor Earth sample study I
+    Targets:
+      - Mob: BIO_STING
+        Count: 50
+      - Mob: BIO_WOOD_GOBLIN
+        Count: 50
+  - Id: 16748
+    Title: Deep 1st floor Earth sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16749
+    Title: Deep 1st floor Earth sample study II
+    Targets:
+      - Mob: BIO_STING
+        Count: 80
+      - Mob: BIO_WOOD_GOBLIN
+        Count: 80
+  - Id: 16750
+    Title: Deep 1st floor Earth sample study II - Standby
+    TimeLimit: 4h
+  - Id: 16751
+    Title: Deep 1st floor Wind sample study I
+    Targets:
+      - Mob: BIO_DRAGON_TAIL
+        Count: 50
+      - Mob: BIO_LITTLE_FATUM
+        Count: 50
+  - Id: 16752
+    Title: Deep 1st floor Wind sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16753
+    Title: Deep 1st floor Wind sample study II
+    Targets:
+      - Mob: BIO_DRAGON_TAIL
+        Count: 80
+      - Mob: BIO_LITTLE_FATUM
+        Count: 80
+  - Id: 16754
+    Title: Deep 1st floor Wind sample study II - Standby
+    TimeLimit: 4h
+  - Id: 16755
+    Title: Deep 1st floor Holy sample study I
+    Targets:
+      - Mob: BIO_HOLY_FRUS
+        Count: 50
+      - Mob: BIO_HOLY_SKOGUL
+        Count: 50
+  - Id: 16756
+    Title: Deep 1st floor Holy sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16757
+    Title: Deep 1st floor Holy sample study II
+    Targets:
+      - Mob: BIO_HOLY_FRUS
+        Count: 80
+      - Mob: BIO_HOLY_SKOGUL
+        Count: 80
+  - Id: 16758
+    Title: Deep 1st floor Holy sample study II - Standby
+    TimeLimit: 4h
+  - Id: 16759
+    Title: Deep 1st floor Death sample study I
+    Targets:
+      - Mob: BIO_SKEL_ARCHER
+        Count: 50
+      - Mob: BIO_SKEL_SOLDIER
+        Count: 50
+  - Id: 16760
+    Title: Deep 1st floor Death sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16761
+    Title: Deep 1st floor Death sample study II
+    Targets:
+      - Mob: BIO_SKEL_ARCHER
+        Count: 80
+      - Mob: BIO_SKEL_SOLDIER
+        Count: 80
+  - Id: 16762
+    Title: Deep 1st floor Death sample study II - Standby
+    TimeLimit: 4h
+  - Id: 16763
+    Title: Deep 1st floor Soul sample study I
+    Targets:
+      - Mob: BIO_EMPATHIZER
+        Count: 50
+      - Mob: BIO_PRAY_GIVER
+        Count: 50
+  - Id: 16764
+    Title: Deep 1st floor Soul sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16765
+    Title: Deep 1st floor Soul sample study II
+    Targets:
+      - Mob: BIO_EMPATHIZER
+        Count: 80
+      - Mob: BIO_PRAY_GIVER
+        Count: 80
+  - Id: 16766
+    Title: Deep 1st floor Soul sample study II - Standby
+    TimeLimit: 4h
+  - Id: 16767
+    Title: Deep 1st floor Poison sample study I
+    Targets:
+      - Mob: BIO_PINGUICULA_D
+        Count: 50
+      - Mob: BIO_POM_SPIDER
+        Count: 50
+  - Id: 16768
+    Title: Deep 1st floor Poison sample study I - Standby
+    TimeLimit: 4h
+  - Id: 16769
+    Title: Deep 1st floor Poison sample study II
+    Targets:
+      - Mob: BIO_PINGUICULA_D
+        Count: 80
+      - Mob: BIO_POM_SPIDER
+        Count: 80
+  - Id: 16770
+    Title: Deep 1st floor Poison sample study II - Standby
+    TimeLimit: 4h
+  - Id: 17566
+    Title: (Standby) Code name! Is it a star button?
+    TimeLimit: 4h
+  - Id: 17619
+    Title: Lazy's Plan
+  - Id: 17620
+    Title: Infiltrating the Snake's Nest
+  - Id: 17621
+    Title: Infiltrating the Snake's Nest
+  - Id: 17622
+    Title: Infiltrating the Snake's Nest
+  - Id: 17623
+    Title: Infiltrating the Snake's Nest
+  - Id: 17624
+    Title: Infiltrating the Snake's Nest
+  - Id: 17625
+    Title: Infiltrating the Snake's Nest
+  - Id: 17626
+    Title: Infiltrating the Snake's Nest
+  - Id: 17627
+    Title: Infiltrating the Snake's Nest
+  - Id: 17628
+    Title: Infiltrating the Snake's Nest
+  - Id: 17629
+    Title: Infiltrating the Snake's Nest
+  - Id: 17630
+    Title: Infiltrating the Snake's Nest
+  - Id: 17631
+    Title: Infiltrating the Snake's Nest
+  - Id: 17632
+    Title: Interim Report of Infiltration Operation
+  - Id: 17633
+    Title: Interim Report of Infiltration Operation
+  - Id: 17634
+    Title: Interim Report of Infiltration Operation
+  - Id: 17635
+    Title: Interim Report of Infiltration Operation
+  - Id: 17636
+    Title: Interim Report of Infiltration Operation
+  - Id: 17637
+    Title: Operation of Aircraft Destruction
+  - Id: 17638
+    Title: Vulnerability Investigation
+  - Id: 17639
+    Title: Accompanying Reconnaissance Report
+  - Id: 17640
+    Title: The Confused Snake's Nest
+  - Id: 17641
+    Title: The Confused Snake's Nest
+  - Id: 17642
+    Title: The Confused Snake's Nest
+  - Id: 17643
+    Title: The Confused Snake's Nest
+  - Id: 17644
+    Title: The Confused Snake's Nest
+  - Id: 17645
+    Title: The Confused Snake's Nest
+  - Id: 17646
+    Title: The Confused Snake's Nest
+  - Id: 17647
+    Title: The Confused Snake's Nest
+  - Id: 17648
+    Title: The Confused Snake's Nest
+  - Id: 17649
+    Title: Those who disappeared
+  - Id: 17650
+    Title: Finding an underground hideout on the ground
+  - Id: 17651
+    Title: Finding an underground hideout on the ground
+  - Id: 17652
+    Title: Finding an underground hideout on the ground
+  - Id: 17653
+    Title: Finding an underground hideout on the ground
+  - Id: 17654
+    Title: Finding an underground hideout on the ground
+  - Id: 17655
+    Title: Finding an underground hideout on the ground
+  - Id: 17656
+    Title: Finding an underground hideout on the ground
+  - Id: 17657
+    Title: Finding an underground hideout on the ground
+  - Id: 17658
+    Title: Finding an underground hideout on the ground
+  - Id: 17659
+    Title: Finding an underground hideout on the ground
+  - Id: 17660
+    Title: Finding an underground hideout on the ground
+  - Id: 17661
+    Title: Standby: Finding an Underground Hideout on the Ground
+    TimeLimit: 4h
+  - Id: 17662
+    Title: Standby: Finding an Underground Hideout on the Ground
+    TimeLimit: 4h
+  - Id: 18122
+    Title: Guardian's Box and Invitation 2
+  - Id: 18123
+    Title: Guardian's Box and Invitation 3
+  - Id: 18124
+    Title: Guardian's Chest and Invitation 5
+  - Id: 18125
+    Title: To the Ice Castle
+  - Id: 18126
+    Title: Meeting the Ice Castle
+  - Id: 18127
+    Title: Let's meet the Iwin Scouts.
+  - Id: 18128
+    Title: Let's meet Boclind.
+  - Id: 18129
+    Title: Guardian's Chest and Invitation 4
+  - Id: 18130
+    Title: Procurement of research materials for Belgund
+  - Id: 18131
+    Title: Procurement of research materials for Belgund - Standby
+    TimeLimit: 4h
+  - Id: 18132
+    Title: I need someone.
+  - Id: 18133
+    Title: Leon's Story
+  - Id: 18134
+    Title: Search for the Displaced - Frozen Glacier
+  - Id: 18135
+    Title: Searching for the Lost - Frozen Plains
+  - Id: 18136
+    Title: Complete rescue of survivors
+  - Id: 18137
+    Title: Search for survivors - Standby
+    TimeLimit: 4h
+  - Id: 18138
+    Title: Special way to survive
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 10
+      - Mob: EP19_RGAN_B
+        Count: 10
+  - Id: 18139
+    Title: Our precious food
+  - Id: 18140
+    Title: Our precious food - Standby
+    TimeLimit: 4h
+  - Id: 18141
+    Title: A noble hobby
+  - Id: 18142
+    Title: A noble hobby - Standby
+    TimeLimit: 4h
+  - Id: 18143
+    Title: For Safe Work
+    Targets:
+      - Mob: EP19_LIMACINA
+        Count: 20
+      - Mob: EP19_CALMARING
+        Count: 20
+  - Id: 18144
+    Title: For Safe Work - Standby
+    TimeLimit: 4h
+  - Id: 17415
+    Title: Thanatos Tower Monsters
+  - Id: 17416
+    Title: 9th Floor Monsters
+    Targets:
+      - Mob: CROW_DUKE
+        Count: 20
+      - Mob: CROW_BARON
+        Count: 20
+  - Id: 17417
+    Title: 10th Floor Monsters
+    Targets:
+      - Mob: VOID_MIMIC
+        Count: 15
+      - Mob: BOOK_OF_DEATH
+        Count: 15
+      - Mob: ELDEST
+        Count: 15
+  - Id: 17418
+    Title: 11th Floor Monsters
+    Targets:
+      - Mob: EMPATHIZER
+        Count: 15
+      - Mob: HAPPY_GIVER
+        Count: 15
+  - Id: 17419
+    Title: 11th Floor Monsters
+    Targets:
+      - Mob: PRAY_GIVER
+        Count: 15
+      - Mob: MD_SOLACE
+        Count: 15
+  - Id: 17420
+    Title: 12th Floor Monsters
+    Targets:
+      - Mob: THA_ANGER
+        Count: 10
+      - Mob: THA_HORROR
+        Count: 10
+  - Id: 17421
+    Title: 12th Floor Monsters
+    Targets:
+      - Mob: THA_RESENT
+        Count: 10
+      - Mob: THA_REGRET
+        Count: 10
+  - Id: 17422
+    Title: Waiting Thanatos Tower 9F
+    TimeLimit: 4h
+  - Id: 17423
+    Title: Waiting Thanatos Tower 10F
+    TimeLimit: 4h
+  - Id: 17424
+    Title: Waiting Thanatos Tower 11F
+    TimeLimit: 4h
+  - Id: 17425
+    Title: Waiting Thanatos Tower 12F
+    TimeLimit: 4h
+  - Id: 18026
+    Title: Memories of Thanatos
+    Targets:
+      - Mob: MD_THANATOS
+        Count: 1
+  - Id: 18027
+    Title: Memories of Thanatos
+    Targets:
+      - Mob: MD_BROKEN_THANATOS
+        Count: 1
+  - Id: 18028
+    Title: Memories of Thanatos - Wait
+    TimeLimit: 4h
+  
+  #Episode21 Age of Heroes
+
+  - Id: 12650
+    Title: Final Battle (Easy)
+  - Id: 12651
+    Title: Final Battle (Normal)
+  - Id: 12646
+    Title: Final Battle - Cooldown
+    TimeLimit: 4h
+  - Id: 16826
+    Title: Ghost Ship Captain
+  - Id: 16823
+    Title: Ghost Ship Captain - Cooldown
+    TimeLimit: 4h
+  - Id: 16461
+    Title: Tomb of Remorse
+  - Id: 16462
+    Title: Tomb of Remorse
+  - Id: 16463
+    Title: Tomb of Remorse
+  - Id: 16464
+    Title: Tomb of Remorse Cooldown
+    TimeLimit: 4h
+  - Id: 16465
+    Title: Broken Threads of Fate
+    Targets:
+      - Mob: MD_SAKRAY
+        Count: 1
+  - Id: 16466
+    Title: Broken Threads of Fate Cooldown
+    TimeLimit: 4h
+  - Id: 16467
+    Title: Shedding in tears
+    Targets:
+      - Mob: MD_TIARA
+        Count: 1
+  - Id: 16468
+    Title: Shedding in tears Cooldown
+    TimeLimit: 4h
+  - Id: 16469
+    Title: Memory Fragments
+  - Id: 16470
+    Title: Memory Fragments Cooldown
+    TimeLimit: 4h
+  - Id: 16471
+    Title: Fragment of the Past
+  - Id: 16472
+    Title: Fragment of the Past Cooldown
+    TimeLimit: 4h
+  - Id: 16473
+    Title: Memory Fragment
+  - Id: 16474
+    Title: Memory Fragment
+  - Id: 16475
+    Title: Memory Fragment
+  - Id: 16476
+    Title: Memory Fragment
+  - Id: 16477
+    Title: Memory Fragment
+  - Id: 16478
+    Title: Memory Fragment
+  - Id: 16479
+    Title: Memory Fragment
+  - Id: 16480
+    Title: Memory Fragment
+  - Id: 16481
+    Title: Memory Fragment
+  - Id: 16482
+    Title: Memory Fragment
+  - Id: 70251
+    Title: Lake of Fire Restriction
+  - Id: 70252
+    Title: Hall of Life Restriction
+
+  # Episode 20: Immortals - added from client-side OngoingQuests.lub
+  # Added only missing quest IDs; existing IDs in original quest_db.yml were left untouched.
+  - Id: 8839
+    Title: "Reluctantly pretending to help"
+  - Id: 8840
+    Title: "Rgan's Trust"
+  - Id: 8841
+    Title: "But think about it"
+  - Id: 8842
+    Title: "You are very angry"
+  - Id: 8843
+    Title: "Silent Answer"
+  - Id: 8844
+    Title: "[Standby] Example of Silent Answer"
+    TimeLimit: +1d
+  - Id: 8845
+    Title: "Example of Silent Answer"
+  - Id: 8846
+    Title: "I came all the way here"
+  - Id: 8847
+    Title: "Nasioramigand's Work"
+  - Id: 8848
+    Title: "Numkasaigargand's Work"
+  - Id: 8849
+    Title: "Onnacharamelgand's Work"
+  - Id: 8850
+    Title: "Jagdagumigand's Work"
+  - Id: 8851
+    Title: "Clejainamogand's Work"
+  - Id: 8852
+    Title: "[Standby] I've come this far"
+    TimeLimit: +1d
+  - Id: 8853
+    Title: "I've come this far"
+  - Id: 8854
+    Title: "I probably have a lunch box"
+  - Id: 8855
+    Title: "Collection of Soft Delicacies"
+    Targets:
+      - Mob: EP20_ANGEL_ICESLUG
+        Count: 20
+      - Mob: EP20_RABBIT_ICESLUG
+        Count: 20
+  - Id: 8856
+    Title: "[Standby] Collection of Soft Delicacies"
+    TimeLimit: +1d
+  - Id: 8857
+    Title: "Salty and Sweet Flavors"
+    Targets:
+      - Mob: EP20_ANGEL_ICESLUG
+        Count: 20
+      - Mob: EP20_RABBIT_ICESLUG
+        Count: 20
+  - Id: 8858
+    Title: "Salty, Sweet and Sour"
+    Targets:
+      - Mob: EP20_ANGEL_ICESLUG
+        Count: 20
+      - Mob: EP20_RABBIT_ICESLUG
+        Count: 20
+      - Mob: EP20_MELIBE_ICESLUG
+        Count: 20
+  - Id: 11928
+    Title: "Koko's Secret Base"
+  - Id: 11929
+    Title: "Koko's Secret Base"
+  - Id: 11930
+    Title: "Koko's Secret Base"
+  - Id: 11931
+    Title: "Koko's Secret Base"
+  - Id: 11932
+    Title: "Koko's Secret Base"
+  - Id: 11933
+    Title: "Koko's Secret Base"
+  - Id: 11934
+    Title: "Koko's Secret Base"
+  - Id: 11935
+    Title: "Koko's Secret Base"
+  - Id: 11936
+    Title: "Koko's Secret Base"
+  - Id: 11937
+    Title: "Koko's Secret Base"
+  - Id: 11938
+    Title: "Koko's Secret Base"
+  - Id: 11939
+    Title: "Koko's Secret Base"
+  - Id: 11940
+    Title: "Koko's Secret Base"
+  - Id: 11941
+    Title: "Koko's Secret Base"
+  - Id: 11942
+    Title: "Koko's Secret Base"
+  - Id: 11943
+    Title: "Koko's Secret Base"
+  - Id: 11944
+    Title: "Koko's Secret Base"
+  - Id: 11945
+    Title: "Koko's Secret Base"
+  - Id: 11946
+    Title: "Koko's Secret Base"
+  - Id: 11947
+    Title: "Koko's Secret Base"
+  - Id: 11948
+    Title: "Escargo!"
+  - Id: 11949
+    Title: "Escargo!"
+    Targets:
+      - Mob: MD_EP20_FALLENANGEL
+        Count: 1
+  - Id: 11950
+    Title: "[Standby] Escargo!"
+    TimeLimit: +1d
+  - Id: 11951
+    Title: "It's Dangerous!"
+    Targets:
+      - Mob: EP20_NPC_COCOPO
+        Count: 10
+  - Id: 11952
+    Title: "[Standby] It's Dangerous!"
+    TimeLimit: +1d
+  - Id: 11953
+    Title: "I Hope They Reconcile (1)"
+    Targets:
+      - Mob: EP20_ICEWIND1
+        Count: 10
+  - Id: 11954
+    Title: "[Standby] I Hope They Reconcile (1)"
+    TimeLimit: +1d
+  - Id: 11955
+    Title: "I Hope They Reconcile (2)"
+    Targets:
+      - Mob: EP20_ICEWIND2
+        Count: 10
+  - Id: 11956
+    Title: "[Standby] I Hope They Reconcile (2)"
+    TimeLimit: +1d
+  - Id: 16691
+    Title: "Expand Exploration Range"
+  - Id: 16692
+    Title: "The Natives of the Ancient Ice Canyon"
+  - Id: 16693
+    Title: "Exploration of the Ancient Ice Canyon"
+  - Id: 16694
+    Title: "Evidence and Return"
+  - Id: 16695
+    Title: "Suspicious Signs"
+  - Id: 16696
+    Title: "Military Camp Investigation"
+  - Id: 16697
+    Title: "Lodge Investigation"
+  - Id: 16698
+    Title: "Back Alley Exploration"
+  - Id: 16699
+    Title: "Suspicious Signs?"
+  - Id: 16700
+    Title: "Identity of the Suspicious Device"
+  - Id: 16701
+    Title: "Canyon Exploration"
+  - Id: 16702
+    Title: "Return to Ice Castle"
+  - Id: 16703
+    Title: "Recent Events"
+  - Id: 16704
+    Title: "Era of Cold War and Espionage"
+  - Id: 17690
+    Title: "A New Exploration Site"
+  - Id: 17691
+    Title: "Infiltrating the Lair of Lergan"
+  - Id: 17692
+    Title: "Infiltrating the Lair of Lergan"
+  - Id: 17693
+    Title: "Infiltrating the Lair of Lergan"
+    Targets:
+      - Mob: EP20_RGAN_WARLOCK
+        Count: 1
+  - Id: 17694
+    Title: "Infiltrating the Lair of Lergan"
+  - Id: 17695
+    Title: "Infiltrating the Lair of Lergan"
+  - Id: 17696
+    Title: "Sacred and Divine"
+  - Id: 17697
+    Title: "Sacred and Divine"
+  - Id: 17698
+    Title: "Sacred and Divine"
+  - Id: 17699
+    Title: "Sacred and Divine"
+  - Id: 17700
+    Title: "Sacred and Divine"
+  - Id: 17701
+    Title: "Earning Lergan's Trust"
+  - Id: 17702
+    Title: "Heading Towards the End of the Maze"
+  - Id: 17703
+    Title: "Heading Towards the End of the Maze"
+    Targets:
+      - Mob: EP20_JORMUNGUARD1
+        Count: 3
+  - Id: 17704
+    Title: "Heading Towards the End of the Maze"
+  - Id: 17705
+    Title: "Heading Towards the End of the Maze"
+  - Id: 17706
+    Title: "Heading Towards the End of the Maze"
+  - Id: 17707
+    Title: "Unexpected Reunion"
+  - Id: 17708
+    Title: "Unexpected Reunion"
+  - Id: 17709
+    Title: "Report on Infiltration"
+  - Id: 17710
+    Title: "Cleaning the Serpent's Maze"
+    Targets:
+      - Mob: EP20_JORMUNGUARD1
+        Count: 10
+  - Id: 17711
+    Title: "[Standby] Cleaning the Serpent's Maze"
+    TimeLimit: +1d
+  - Id: 17712
+    Title: "A New Beginning"
+  - Id: 17713
+    Title: "A New Beginning"
+  - Id: 17714
+    Title: "A New Beginning"
+  - Id: 17715
+    Title: "A New Beginning"
+  - Id: 17716
+    Title: "A New Beginning"
+  - Id: 17717
+    Title: "[Standby] Taste of Leisure"
+    TimeLimit: +1d
+  - Id: 17718
+    Title: "Taste of Leisure"
+  - Id: 17719
+    Title: "Sacred and Divine"
+  - Id: 17720
+    Title: "Taste of Leisure"
+  - Id: 17721
+    Title: "Taste of Leisure"
+  - Id: 18220
+    Title: "To the Ice Castle"
+  - Id: 18221
+    Title: "Finding Lehrar...!"
+  - Id: 18222
+    Title: "Investigation, Investigation, Investigation"
+  - Id: 18223
+    Title: "Lehrar's Mark 1"
+  - Id: 18224
+    Title: "Lehrar's Mark 2"
+  - Id: 18225
+    Title: "Lehrar's Mark 3"
+  - Id: 18226
+    Title: "It's Just a Hoax. The Next Location."
+  - Id: 18227
+    Title: "Investigating the Sacred Roots"
+  - Id: 18228
+    Title: "Nyar's Call"
+  - Id: 18229
+    Title: "Step on the Cats' Backs and Run!"
+  - Id: 18230
+    Title: "Was Everyone Here?"
+  - Id: 18231
+    Title: "So, What Happened?"
+  - Id: 18232
+    Title: "Separated Sanctuary"
+  - Id: 18233
+    Title: "The Undying One"
+  - Id: 18234
+    Title: "Awin's Awin Worry"
+  - Id: 18235
+    Title: "[Standby] Awin's Awin Worry"
+    TimeLimit: +1d
+  - Id: 18236
+    Title: "Boclinde's Extermination Operation 1"
+  - Id: 18237
+    Title: "[Standby] Boclinde's Extermination Operation 1"
+    TimeLimit: +1d
+  - Id: 18238
+    Title: "Boclinde's Extermination Operation 2"
+  - Id: 18239
+    Title: "[Standby] Boclinde's Extermination Operation 2"
+    TimeLimit: +1d
+  - Id: 18240
+    Title: "To Ice Castle"
+  - Id: 19158
+    Title: "More Professional Than Any Awin"
+  - Id: 19159
+    Title: "Briefing"
+  - Id: 19160
+    Title: "Spy Countermeasure Meeting"
+  - Id: 19161
+    Title: "Mission Explanation"
+  - Id: 19162
+    Title: "Today's Watchword"
+    TimeLimit: +1d
+  - Id: 19163
+    Title: "[Standby] Spy Search"
+    TimeLimit: +1d
+  - Id: 19164
+    Title: "Spy Search Success"
+  - Id: 19165
+    Title: "[Standby] Retrieve Espionage Info"
+    TimeLimit: +1d
+  - Id: 19166
+    Title: "Completion of Espionage Info Retrieval"
+  - Id: 19167
+    Title: "Failure in Retrieving Espionage Info"
+  - Id: 19169
+    Title: "Meeting Place for Contact"
+  - Id: 19177
+    Title: "Meeting Place for Contact"
+  - Id: 23100
+    Title: "Ancient Deep Sea"
+  - Id: 23101
+    Title: "No Matter How Deep, I Can Find It 1"
+    Targets:
+      - Mob: EP19_ICE_GANGU
+        Count: 5
+  - Id: 23102
+    Title: "No Matter How Deep, I Can Find It 2"
+    Targets:
+      - Mob: EP19_SHINING_SEAWEED
+        Count: 5
+  - Id: 23103
+    Title: "Hidden in the Ice"
+  - Id: 23104
+    Title: "Hidden in the Ice"
+  - Id: 23105
+    Title: "Hidden in the Ice"
+  - Id: 23106
+    Title: "A Nest of Small Branches"
+  - Id: 23108
+    Title: "Across the Iceberg and the Frozen Sea"
+  - Id: 23109
+    Title: "Across the Iceberg and the Frozen Sea"
+    Targets:
+      - Mob: EP20_JORGAN_WARLOCK
+        Count: 5
+  - Id: 23110
+    Title: "[Standby] Pulling Out Yormungand's Roots"
+    TimeLimit: +1d
+  - Id: 23111
+    Title: "Pulling Out Yormungand's Roots"
+    Targets:
+      - Mob: EP20_JORGAN_WARLOCK
+        Count: 15
+  - Id: 23112
+    Title: "The Serpent's Maze"
+  - Id: 23113
+    Title: "Gathering Rumors Among Yormungands 1"
+  - Id: 23114
+    Title: "Gathering Rumors Among Yormungands 2"
+  - Id: 23115
+    Title: "Gathering Rumors Among Yormungands 3"
+  - Id: 23116
+    Title: "The Cat at the End of the Maze"
+  - Id: 23117
+    Title: "The Cat at the End of the Maze"
+  - Id: 23118
+    Title: "The Cat at the End of the Maze"

@@ -1,0 +1,196 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2022 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Item Combo Database
+###########################################################################
+#
+# Settings
+#
+###########################################################################
+# - Combos:                 List of combo sets.
+#    - Combo:               Sequence of items to define a combo (minimum of 2 items).
+#       - <item name>       AEGIS name of the item
+#   Script                  Script to execute when one of the combos is equipped. (Default: null)
+#   Clear                   Remove the defined combos from database. (Default: false)
+###########################################################################
+
+Header:
+  Type: COMBO_DB
+  Version: 1
+Body:
+  # ===== Terrestrial Mechanical Mace (590122) - Mechanic =====
+  - Combos:
+      - Combo:
+          - Inception_Ring
+          - Sprit_of_World
+      - Combo:
+          - Comp_Inception_Ring
+          - Sprit_of_World
+    Script: |
+      bonus bMatk,30;
+      bonus bVariableCastrate,-5;
+      bonus bFixedCast,-200;
+      bonus2 bMagicAddClass,Class_Boss,20;
+  - Combos:
+      - Combo:
+          - Broken_Bamboo_Piece
+          - Red_Beret
+    Script: |
+      if (isequipped(Red_Beret)) {
+          bonus bMaxHP,300;
+          bonus bMaxSP,50;
+      }
+  - Combos:
+      - Combo:
+          - Sky_Rune_Crown_AT
+          - Sky_Glacier_Mace
+    Script: |
+      .@r_head = getequiprefinerycnt(Sky_Rune_Crown_AT);
+      .@r_weapon = getequiprefinerycnt(Sky_Glacier_Mace);
+      .@r_total = .@r_head + .@r_weapon;
+      .@g_head = getenchantgrade(Sky_Rune_Crown_AT);
+      .@g_weapon = getenchantgrade(Sky_Glacier_Mace);
+      bonus2 bSkillAtk,"AT_GLACIER_NOVA",45;
+      bonus2 bMagicAtkEle,Ele_Water,15;
+      if (.@r_total>=24 && .@g_head>=ENCHANTGRADE_A && .@g_weapon>=ENCHANTGRADE_A && getskilllv("AT_GLACIER_STOMP")>=5) {
+        bonus2 bSkillCooldown,"AT_GLACIER_MONOLITH",-1000;
+        bonus3 bAutoSpellWhenUsingSkill,"AT_GLACIER_MONOLITH","AT_GLACIER_STOMP",5;
+      }
+  - Combos:
+      - Combo:
+          - Frontier_R_Crown_AT
+          - Frontier_AT_Axe
+    Script: |
+      .@r_crown = getequiprefinerycnt(Frontier_R_Crown_AT);
+      .@r_weapon = getequiprefinerycnt(Frontier_AT_Axe);
+      .@r_total = .@r_crown + .@r_weapon;
+      .@g_crown = getenchantgrade(Frontier_R_Crown_AT);
+      .@g_weapon = getenchantgrade(Frontier_AT_Axe);
+      bonus2 bSkillAtk,"AT_PRIMAL_CLAW",25;
+      bonus2 bSkillAtk,"AT_ALPHA_CLAW",25;
+      bonus bCritAtkRate,15;
+      if (.@r_total>=24 && .@g_crown>=ENCHANTGRADE_A && .@g_weapon>=ENCHANTGRADE_A) {
+        bonus2 bSkillAtk,"AT_ALPHA_CLAW",15;
+        bonus2 bIgnoreDefRaceRate,RC_All,15;
+        bonus2 bIgnoreDefRaceRate,RC_Player_Human,-15;
+        bonus2 bIgnoreDefRaceRate,RC_Player_Doram,-15;
+        bonus bCritical,2*.@r_weapon;
+        bonus bCritAtkRate,.@r_weapon;
+      }
+  - Combos:
+      - Combo:
+          - aegis_314848
+          - aegis_314853
+    Script: |
+      bonus2 bSkillAtk,"KR_THUNDERING_ORB",10;
+  - Combos:
+      - Combo:
+          - aegis_314848
+          - aegis_314854
+    Script: |
+      bonus2 bSkillAtk,"KR_CLAW_WAVE",10;
+  - Combos:
+      - Combo:
+          - aegis_314848
+          - aegis_314855
+    Script: |
+      bonus2 bSkillAtk,"KR_SHARPEN_GUST",10;
+  - Combos:
+      - Combo:
+          - Alitea_Stone_Garment_Enchant
+          - aegis_314853
+    Script: |
+      bonus2 bSkillAtk,"AT_GLACIER_SHARD",15;
+      bonus2 bSkillAtk,"AT_TERRA_HARVEST",15;
+  - Combos:
+      - Combo:
+          - Alitea_Stone_Garment_Enchant
+          - aegis_314854
+    Script: |
+      bonus bCritical,50;
+      bonus2 bSkillAtk,"AT_ALPHA_CLAW",15;
+  - Combos:
+      - Combo:
+          - Alitea_Stone_Garment_Enchant
+          - aegis_314855
+    Script: |
+      bonus bCritical,50;
+      bonus2 bSkillAtk,"AT_QUILL_SPEAR",15;
+  - Combos:
+      - Combo:
+          - aegis_314848
+          - aegis_314850
+    Script: |
+      bonus2 bSkillAtk,"KR_NASTY_SLASH",10;
+      bonus2 bSkillAtk,"KR_TYPHOON_WING",10;
+  - Combos:
+      - Combo:
+          - aegis_314848
+          - aegis_314851
+    Script: |
+      bonus2 bSkillAtk,"KR_EARTH_STAMP",10;
+      bonus2 bSkillAtk,"KR_SHARPEN_HAIL",10;
+  - Combos:
+      - Combo:
+          - aegis_314848
+          - aegis_314852
+    Script: |
+      bonus2 bSkillAtk,"KR_ICE_SPLASH",10;
+      bonus2 bSkillAtk,"KR_DOUBLE_SLASH",10;
+  - Combos:
+      - Combo:
+          - S_AT_Armor
+          - S_Master_Shield
+    Script: |
+      bonus bPow,2;
+      bonus bSta,2;
+      bonus bWis,2;
+      bonus bSpl,2;
+      bonus bCon,2;
+      bonus bCrt,2;
+  - Combos:
+      - Combo:
+          - S_AT_Armor
+          - S_AT_Shoes
+          - S_Master_Shield
+    Script: |
+      bonus bPAtk,1;
+      bonus bSMatk,1;
+      if (getequiprefinerycnt(S_AT_Armor)+getequiprefinerycnt(S_AT_Shoes)+getequiprefinerycnt(S_Master_Shield)>=27) {
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+        bonus2 bIgnoreMDefRaceRate,RC_All,50;
+        bonus2 bIgnoreDefRaceRate,RC_Player_Human,-50;
+        bonus2 bIgnoreDefRaceRate,RC_Player_Doram,-50;
+        bonus2 bIgnoreMDefRaceRate,RC_Player_Human,-50;
+        bonus2 bIgnoreMDefRaceRate,RC_Player_Doram,-50;
+      }
+  - Combos:
+      - Combo:
+          - S_AT_Armor
+          - S_AT_Shoes
+          - S_AT_Earring
+          - S_AT_Pendant
+          - S_Master_Weapon
+          - S_Master_Shield
+    Script: |
+      bonus2 bIgnoreDefRaceRate,RC_All,20;
+      bonus2 bIgnoreMDefRaceRate,RC_All,20;
+      bonus2 bIgnoreDefRaceRate,RC_Player_Human,-20;
+      bonus2 bIgnoreDefRaceRate,RC_Player_Doram,-20;
+      bonus2 bIgnoreMDefRaceRate,RC_Player_Human,-20;
+      bonus2 bIgnoreMDefRaceRate,RC_Player_Doram,-20;

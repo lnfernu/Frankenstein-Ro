@@ -1,0 +1,489 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2022 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Item Cash Database
+###########################################################################
+#
+# Item Cash Settings
+#
+###########################################################################
+# - Tab                     Cash shop tab. Available tabs are New, Hot, Limited, Rental, Permanent, Scrolls, Consumables, Other, Sale.
+#   Items:                  List of possible items.
+#     - Item                Item name.
+#       Price               Item cost in cash points (#CASHPOINTS).
+# @reload db/import/item_cash.yml
+###########################################################################
+
+Header:
+  Type: ITEM_CASH_DB
+  Version: 1
+Body:
+  - Tab: New
+    Items:
+      - Item: World_Tour_Ticket
+        Price: 1
+      - Item: Sweets_Coin
+        Price: 1
+      - Item: WOB_Rachel
+        Price: 500
+      - Item: WOB_Rune
+        Price: 500
+      - Item: WOB_Schwaltz
+        Price: 500
+      - Item: Giant_Fly_Wing
+        Price: 200
+      - Item: ANNIV23_CARD_PACK
+        Price: 5000
+      - Item: EXP_Drop_Up_Box
+        Price: 10
+      - Item: A_Unlimited_10_Box
+        Price: 10
+      - Item: A_DEF_Scroll_Box_Set
+        Price: 10
+      - Item: A_LimitPowerBooster_100
+        Price: 10
+      - Item: A_Almighty100_Box
+        Price: 10
+      - Item: A_3_Life_Potion_10pack
+        Price: 10
+      - Item: A_Vigorgra_Set
+        Price: 10
+      - Item: Infinity_10_Box2
+        Price: 10
+      - Item: AID_Buff_Box
+        Price: 10
+      - Item: C_Convex_Mirror_Box30
+        Price: 10
+      - Item: C_Siegfried_Box50
+        Price: 10
+      - Item: C_Wing_Of_Fly_Box
+        Price: 100
+      - Item: F_Giant_Fly_Wing_Box100
+        Price: 20
+  - Tab: Hot
+    Items:
+      - Item: Max_Weight_Up_Box
+        Price: 1000
+      - Item: Siegfried_Box20
+        Price: 1000
+      - Item: A_Speed_Booster_10_Box
+        Price: 1000
+      - Item: A_Speed_Booster_Box
+        Price: 100
+      - Item: A_LimitPowerBooster_100
+        Price: 2000
+      - Item: Insurance
+        Price: 10
+      - Item: Kafra_Card
+        Price: 5
+      - Item: Bloody_Dead_Branch
+        Price: 200
+      - Item: Boarding_Halter
+        Price: 60000
+      - Item: Neuralizer_Box
+        Price: 2000
+      - Item: Shibasays_Pack1_US
+        Price: 3000
+      - Item: Shibasays_Pack2_US
+        Price: 3000
+      - Item: Shibasays_Pack3_US
+        Price: 3000
+      - Item: Shibasays_Pack4_US
+        Price: 3000
+      - Item: Sonic_Premium_Pack3_US
+        Price: 1500
+      - Item: Super_Sonic_pack_
+        Price: 325
+      - Item: S_Badge_pack_
+        Price: 100
+      - Item: Sonic_Premium_Pack1_US
+        Price: 750
+  - Tab: Limited
+    Items:
+      - Item: Enriched_Etherdeocon
+        Price: 4000
+      - Item: Enriched_Ethernium
+        Price: 4000
+      - Item: Enriched_Elunium
+        Price: 4000
+      - Item: HD_Etherdeocon
+        Price: 5000
+      - Item: Ethernium
+        Price: 3000
+      - Item: HD_Ethernium
+        Price: 5000
+      - Item: HD_Carnium
+        Price: 7000
+      - Item: Enriched_Oridecon
+        Price: 4000
+      - Item: Etel_Carnium
+        Price: 7000
+      - Item: Mightysoul_Essence
+        Price: 4000
+      - Item: Guarantee_Weapon_11Up
+        Price: 90000
+      - Item: Guarantee_Armor_11Up
+        Price: 90000
+      - Item: Emperium_Anvil
+        Price: 5000
+      - Item: A_Refine_Ore_Box_Set
+        Price: 5000
+      - Item: HD_Oridecon_50Box
+        Price: 5000
+      - Item: F_HD_Bradium_Box10
+        Price: 5000
+      - Item: HD_Elunium_50Box
+        Price: 5000
+      - Item: F_HD_Carnium_Box10
+        Price: 5000
+  - Tab: Rental
+    Items:
+      - Item: C_All_In_One_Ring_Box
+        Price: 2000
+      - Item: Wasteland_Outlaw_Box
+        Price: 5000
+      - Item: Freyja_Crown_Box
+        Price: 2500
+      - Item: Freyja_Overcoat_Box
+        Price: 2500
+      - Item: Freyja_Cape_Box
+        Price: 2500
+      - Item: Freyja_Boots_Box
+        Price: 2500
+      - Item: Beholder_Ring_Box
+        Price: 2500
+      - Item: Beholder_Ring_Box2
+        Price: 5000
+      - Item: Bloody_Ring_Box
+        Price: 2500
+      - Item: Bloody_Ring_Box2
+        Price: 5000
+      - Item: Chemical_Ring_Box
+        Price: 2500
+      - Item: Chemical_Ring_Box2
+        Price: 5000
+      - Item: Clamorous_Ring_Box
+        Price: 2500
+      - Item: Clamorous_Ring_Box2
+        Price: 5000
+      - Item: Decussate_Ring_Box
+        Price: 2500
+      - Item: Decussate_Ring_Box2
+        Price: 500
+      - Item: Dragoon_Ring_Box
+        Price: 250
+      - Item: Dragoon_Ring_Box2
+        Price: 500
+      - Item: Fisher_Ring_Box
+        Price: 2500
+      - Item: Fisher_Ring_Box2
+        Price: 5000
+      - Item: Hallow_Ring_Box
+        Price: 2500
+      - Item: Hallow_Ring_Box2
+        Price: 5000
+      - Item: Insecticide_Ring_Box
+        Price: 2500
+      - Item: Insecticide_Ring_Box2
+        Price: 5000
+      - Item: Satanic_Ring_Box
+        Price: 2500
+      - Item: Satanic_Ring_Box2
+        Price: 5000
+  - Tab: Permanent
+    Items:
+      - Item: C_Immortal_H_Spear
+        Price: 4000
+      - Item: C_Immortal_H_Power
+        Price: 5000
+      - Item: C_Immortal_H_Wing
+        Price: 5000
+      - Item: C_Juncea_Wing
+        Price: 4000
+      - Item: C_Hemel_Sword
+        Price: 3000
+      - Item: C_Over_Cloud
+        Price: 2000
+      - Item: C_Aurora_On_Clouds
+        Price: 2000
+      - Item: C_Dragon_Red_Aura
+        Price: 1000
+      - Item: C_Dragon_Green_Aura
+        Price: 1000
+      - Item: C_Dragon_Yellow_Aura
+        Price: 1000
+      - Item: C_Carabao_MSP
+        Price: 1000
+      - Item: C_Midnight_Candle
+        Price: 1200
+      - Item: C_Pitaya_GG_Parfait
+        Price: 1000
+      - Item: C_Cosmic_Connection_V
+        Price: 3500
+      - Item: C_Galapago_Aquarium
+        Price: 3500
+      - Item: C_Resurrection_Bow
+        Price: 4000
+      - Item: C_I_Samurai_Sword
+        Price: 3000
+      - Item: C_CLB_HM_Noni
+        Price: 3000
+      - Item: C_Lapine_Wing
+        Price: 3000
+      - Item: C_C_F_Aureola_RD
+        Price: 1000
+      - Item: Autumn_Full_Moon
+        Price: 4000
+      - Item: C_Auspicloud
+        Price: 4000
+      - Item: C_Green_Sunbed
+        Price: 2000
+      - Item: C_Kitchen_Car2
+        Price: 2000
+      - Item: C_Call_Octo
+        Price: 2000
+      - Item: C_FB_EvilSprit
+        Price: 2000
+      - Item: Alphonse_Helmet
+        Price: 1000
+      - Item: C_Man_Medal
+        Price: 500
+      - Item: C_Tuktuk
+        Price: 1500
+      - Item: C_Libra_Of_Judgement
+        Price: 2000
+      - Item: C_Somtam
+        Price: 2000
+      - Item: C_Experiment_Mind
+        Price: 2000
+      - Item: C_15th_Nov_Helmet
+        Price: 2000
+      - Item: Sprit_Of_World
+        Price: 5000
+      - Item: C_Summer_Beach
+        Price: 2500
+      - Item: C_FH_Lostwing
+        Price: 1500
+      - Item: C_2508_Salt_Hat
+        Price: 1500
+      - Item: C_Sorcerer_Cape
+        Price: 2000
+      - Item: C_Cat_Whisper_Cloth
+        Price: 1000
+      - Item: C_Niflheim_Night_Sky
+        Price: 4000
+      - Item: C_N_Mad_Bunny
+        Price: 2000
+      - Item: C_CLB_HM_Munch
+        Price: 4000
+      - Item: C_2025RosFesta
+        Price: 4000
+      - Item: C_Perm_Frost_Oblivion
+        Price: 2000
+      - Item: C_CLB_GAT_doc
+        Price: 2500
+      - Item: C_JP_EV19
+        Price: 3000
+      - Item: C_JP_EV18
+        Price: 3000
+      - Item: C_Hot_Spring
+        Price: 2000
+      - Item: C_CLB_KP_Select_Box1
+        Price: 3500
+      - Item: C_CLB_KP_Select_Box2
+        Price: 3500
+      - Item: InkPainting_Select_Box
+        Price: 3500
+  - Tab: Scrolls
+    Items:
+      - Item: Blessing_10_Scroll
+        Price: 5
+      - Item: Inc_Agi_10_Scroll
+        Price: 5
+      - Item: Aspersio_5_Scroll
+        Price: 5
+      - Item: Assumptio_5_Scroll
+        Price: 5
+      - Item: Wind_Walk_10_Scroll
+        Price: 5
+      - Item: Adrenaline_Scroll
+        Price: 5
+      - Item: Flee_30_Scroll
+        Price: 5
+      - Item: Accuracy_30_Scroll
+        Price: 5
+      - Item: CP_Helm_Scroll_Box
+        Price: 50
+      - Item: CP_Shield_Scroll_Box
+        Price: 50
+      - Item: CP_Weapon_Scroll_Box
+        Price: 50
+      - Item: CP_Armor_Scroll_Box
+        Price: 50
+      - Item: Blessing10_Box50
+        Price: 10
+      - Item: Inc_Agi_10_Box50
+        Price: 10
+      - Item: Assumptio_5_Box50
+        Price: 10
+      - Item: Wind_Walk10_Box50
+        Price: 10
+      - Item: Adrenaline_Scroll_Box
+        Price: 250
+      - Item: A_DEF_Scroll_Box_Set
+        Price: 1000
+      - Item: A_DEF_Scroll_Box
+        Price: 100
+      - Item: Fan_Greed_1Hour_Box
+        Price: 10
+  - Tab: Consumables
+    Items:
+      - Item: AP_Potion_Box
+        Price: 3000
+      - Item: Str_Dish10_
+        Price: 50
+      - Item: Agi_Dish10_
+        Price: 50
+      - Item: Vit_Dish10_
+        Price: 50
+      - Item: Int_Dish10_
+        Price: 50
+      - Item: Dex_Dish10_
+        Price: 50
+      - Item: Luk_Dish10_
+        Price: 50
+      - Item: Luxurious_Dinner_E
+        Price: 50
+      - Item: Guyak_Pudding
+        Price: 10
+      - Item: Tyr's_Blessing
+        Price: 10
+      - Item: Sesame_Pastry
+        Price: 5
+      - Item: Honey_Pastry
+        Price: 5
+      - Item: Med_Life_Potion
+        Price: 5
+      - Item: B_Def_Potion
+        Price: 5
+      - Item: B_Mdef_Potion
+        Price: 5
+      - Item: Red_Booster
+        Price: 10
+      - Item: ASPD_Potion
+        Price: 10
+      - Item: SP_Potion
+        Price: 5
+      - Item: Mega_Resist_Potion
+        Price: 5
+      - Item: B_Mdef_Potion_Box50
+        Price: 300
+      - Item: Bubble_Gum
+        Price: 25
+      - Item: HE_Bubble_Gum
+        Price: 50
+      - Item: Job_Manual_Limit
+        Price: 150
+      - Item: Job_Manual50
+        Price: 150
+      - Item: Battle_Manual_X3
+        Price: 150
+      - Item: Convex_Mirror
+        Price: 20
+      - Item: Yggdrasilberry_Box_
+        Price: 1000
+      - Item: C_Med_Life_Potion_Box50
+        Price: 10
+      - Item: LI_Mana_Potion_Box
+        Price: 10
+      - Item: C_Rapid_Life_Water_Box2
+        Price: 10
+      - Item: B_Def_Potion_Box50
+        Price: 300
+      - Item: C_Regeneration_Box10
+        Price: 10
+      - Item: Poison_Bottle_Box100
+        Price: 20
+      - Item: C_Acid_B_500_Box
+        Price: 100
+      - Item: Acidbomb_Box500
+        Price: 100
+      - Item: Insurance_Package30
+        Price: 1000
+      - Item: Abrasive_Box10
+        Price: 1000
+      - Item: Battle_Manual_X3_Box
+        Price: 1000
+      - Item: C_Enriched_Oridecon_Box
+        Price: 100
+      - Item: C_Enriched_Elunium_Box
+        Price: 100
+      - Item: Almighty_Box
+        Price: 2000
+      - Item: C_Center_Pot_3d_Box
+        Price: 500
+      - Item: C_Awakening_Pot_3d_Box
+        Price: 750
+      - Item: C_Berserk_Pot_3d_Box
+        Price: 1000
+      - Item: A_Infinity_Box
+        Price: 500
+      - Item: A_Infinity_10_Box
+        Price: 5000
+      - Item: Blue_Potion_Box
+        Price: 5
+      - Item: BM_Limit_Pack
+        Price: 1000
+  - Tab: Other
+    Items:
+      - Item: Apro_Hair
+        Price: 500
+      - Item: Nice_Badge
+        Price: 500
+      - Item: Black_Butterfly_Mask
+        Price: 500
+      - Item: Fashionable_Glasses
+        Price: 500
+      - Item: Golden_Earing
+        Price: 500
+      - Item: Green_Lucky_Bag
+        Price: 500
+      - Item: Horn_Protector
+        Price: 500
+      - Item: Hell_Horn
+        Price: 500
+      - Item: Jade_Trinket
+        Price: 500
+      - Item: Ball_Mask
+        Price: 500
+      - Item: Death_Coil
+        Price: 500
+      - Item: Windup_Spring
+        Price: 500
+      - Item: Star_Hairband
+        Price: 500
+      - Item: Summer_Fan
+        Price: 500
+      - Item: Wine_On_Sleeve
+        Price: 500
+      - Item: Queen's_Coronet
+        Price: 500
+      - Item: Spirit_Chain_
+        Price: 500
+      - Item: Full_Moon
+        Price: 1000
