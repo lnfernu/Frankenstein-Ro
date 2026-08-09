@@ -253,12 +253,12 @@ payon,184,65,3	script	Wise Bull Horn	866,{
 		mes "Vou precisar destes itens...";
 		next;
 		mes "[Wise Bull Horn]";
-		mes "^3355FF1 Tronco^000000,";
-		mes "^3355FF3 Pelos^000000,";
-		mes "^3355FF3 Zargons^000000,";
+		mes "^3355FF1 Troncos^000000,";
+		mes "^3355FF3 Felpas^000000,";
+		mes "^3355FF3 Zargoniôs^000000,";
 		mes "^3355FF10 Cascas^000000,";
 		mes "^3355FF3 Ervas Verdes^000000, e";
-		mes "^3355FF3 Cascas Arco-íris^000000.";
+		mes "^3355FF3 Casco Arco-íris^000000.";
 		next;
 		mes "[Wise Bull Horn]";
 		mes "Depois que eu completar o";
