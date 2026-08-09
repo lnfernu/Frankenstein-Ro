@@ -3647,3 +3647,13 @@ iz_int03 47 30 iz_int03 27 30
 iz_int03 27 30 iz_int03 51 30
 iz_int02 56 15 iz_int02 27 30
 iz_int02 27 30 iz_int02 51 30
+iz_ac02 198 27 iz_ac01 122 25
+iz_ac02 194 44 iz_ac02 124 48
+iz_ac02 124 48 iz_ac02 218 44
+que_ng 166 85 que_ng 178 162
+einbroch 136 199 que_ng 130 166
+payon_in03 98 114 payon 155 248
+payon 155 248 payon_in03 98 117
+payon_in03 99 148 payon_in03 99 133
+payon_in03 99 133 payon_in03 99 151
+payon 135 158 payon_in01 20 129
