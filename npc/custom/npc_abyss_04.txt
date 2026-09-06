@@ -1,0 +1,767 @@
+// =====================================================================
+// ===== rAthena Script =======================================
+//= Sistema: Caverna do Lago do Abismo (4) e NPCs Relacionados
+//======================================================================
+//= Autoria: NYDDARK
+//= Atualização: 2026-08-25
+//======================================================================
+//= Descrição do Arquivo:
+//=   - Folclorista Marigold (Pesquisadora de Dragões) [hugel,102,148]
+//=   - Rúbia (Forjadora Dracônica)                  [hu_in01,95,322]
+//=   - Cerúlio (Complementos Dracônicos)            [hu_in01,93,322]
+//=   - Navegação (Abyss_03 <-> Abyss_04)
+// =====================================================================
+
+// =====================================================================
+// 1. NPC: Folclorista Marigold
+// =====================================================================
+hugel,102,148,4	Script	Folclorista Marigold	893,{
+	// Quest IDs
+	set .@QUEST_FERUS_P, 7893;    // Um Ferus de cor estranha
+	set .@QUEST_MIMIC, 7895;      // Estudando o Novo Mímico
+	set .@QUEST_ACIDUS, 7897;     // Estudo Elemental de Acidus
+	set .@QUEST_BONE, 7899;       // Contra a Providência
+
+	// Quests de espera (cooldown)
+	set .@QUEST_FERUS_WAIT, 7894;  // A unique color of Ferrus - Waiting
+	set .@QUEST_MIMIC_WAIT, 7896;   // New Mimic Investigation - Waiting
+	set .@QUEST_ACIDUS_WAIT, 7898; // Assistance Properties Study - Standby
+	set .@QUEST_BONE_WAIT, 7900;   // Going against providence - Waiting
+
+	// Base EXP rewards
+	set .@EXP_FERUS_BASE, 15823920;
+	set .@EXP_MIMIC_BASE, 7979360;
+	set .@EXP_ACIDUS_BASE, 32090640;
+	set .@EXP_BONE_BASE, 48548160;
+
+	// Job EXP rewards
+	set .@EXP_FERUS_JOB, 11076720;
+	set .@EXP_MIMIC_JOB, 5585560;
+	set .@EXP_ACIDUS_JOB, 22463360;
+	set .@EXP_BONE_JOB, 33983640;
+
+	// Initial dialogue
+	mes "[Folclorista Marigold]";
+	mes "Gostaria de estudar a nova espécie de dragões descoberta nas profundezas do Lago do Abismo.";
+	mes "Você, como aventureiro, estaria disposto a me ajudar?";
+	next;
+
+	// Main menu
+	set .@menu, select("Um Ferus de cor estranha:Estudando o Novo Mimico:Estudo Elemental de Acidus:Contra a Providencia:O que voce estuda?");
+
+	if (.@menu == 1) {
+		// Opção 1: Um Ferus de cor estranha
+		mes "[Marigold]";
+		mes "Ouvi dizer que um Ferus roxo estranho foi descoberto no 4º andar da Caverna do Abismo.";
+		mes "Os Ferus tendem a seguir elementos naturais, então o roxo é bem extraordinário, não é?";
+		mes "Então eu quero saber sobre esse roxo.";
+		next;
+
+		if (checkquest(.@QUEST_FERUS_WAIT) > 0) {
+			mes "[Marigold]";
+			mes "Ainda estou estudando as informações que você trousse, volte as 04:00 da manhã.";
+			close;
+		}
+		else if (checkquest(.@QUEST_FERUS_P, HUNTING) == 2) {
+			completequest .@QUEST_FERUS_P;
+			setquest .@QUEST_FERUS_WAIT;
+			baseexp += .@EXP_FERUS_BASE;
+			jobexp += .@EXP_FERUS_JOB;
+			mes "[Marigold]";
+			mes "Ótimo.";
+			mes "Volte amanhã às 4h para mais pesquisas.";
+			close;
+		}
+		else if (checkquest(.@QUEST_FERUS_P, HUNTING) == 0 || checkquest(.@QUEST_FERUS_P, HUNTING) == 1) {
+			mes "[Marigold]";
+			mes "Retorne quando completar.";
+			close;
+		}
+		else {
+			set .@accept, select("Aceitar o pedido.:Recusar.");
+
+			if (.@accept == 1) {
+				setquest .@QUEST_FERUS_P;
+				mes "[Marigold]";
+				mes "Retorne quando completar.";
+				close;
+			} else {
+				mes "[Marigold]";
+				mes "Ah, que pena. Se mudar de ideia, volte quando quiser.";
+				close;
+			}
+		}
+	}
+	else if (.@menu == 2) {
+		// Opção 2: Estudando o Novo Mímico
+		mes "[Folclorista Marigold]";
+		mes "Ouvi dizer que um novo tipo de Mímico foi descoberto no 4º andar da Caverna do Abismo.";
+		mes "Chama-se Mímico Precioso, e eu me pergunto que tipo de espólios ele dará.";
+		next;
+
+		if (checkquest(.@QUEST_MIMIC_WAIT) > 0) {
+			mes "[Marigold]";
+			mes "Ainda estou estudando as informações que você trousse, volte as 04:00 da manhã.";
+			close;
+		}
+		else if (checkquest(.@QUEST_MIMIC, HUNTING) == 2) {
+			completequest .@QUEST_MIMIC;
+			setquest .@QUEST_MIMIC_WAIT;
+			baseexp += .@EXP_MIMIC_BASE;
+			jobexp += .@EXP_MIMIC_JOB;
+			mes "[Marigold]";
+			mes "Ótimo.";
+			mes "Volte amanhã às 4h para mais pesquisas.";
+			close;
+		}
+		else if (checkquest(.@QUEST_MIMIC, HUNTING) == 0 || checkquest(.@QUEST_MIMIC, HUNTING) == 1) {
+			mes "[Marigold]";
+			mes "Retorne quando completar.";
+			close;
+		}
+		else {
+			set .@accept, select("Aceitar o pedido.:Recusar.");
+
+			if (.@accept == 1) {
+				setquest .@QUEST_MIMIC;
+				mes "[Marigold]";
+				mes "Retorne quando completar.";
+				close;
+			} else {
+				mes "[Marigold]";
+				mes "Ah, que pena. Se mudar de ideia, volte quando quiser.";
+				close;
+			}
+		}
+	}
+	else if (.@menu == 3) {
+		// Opção 3: Estudo Elemental de Acidus
+		mes "[Folclorista Marigold]";
+		mes "Você pode deduzir aproximadamente qual elemento natural um Acidus possui pela sua cor.";
+		mes "Mas não tenho certeza sobre o Acidus Negro e o Acidus Prateado, então estou procurando alguém que lute contra eles e me traga relatos sobre suas resistências e fraquezas.";
+		next;
+
+		if (checkquest(.@QUEST_ACIDUS_WAIT) > 0) {
+			mes "[Marigold]";
+			mes "Ainda estou estudando as informações que você trousse, volte as 04:00 da manhã.";
+			close;
+		}
+		else if (checkquest(.@QUEST_ACIDUS, HUNTING) == 2) {
+			completequest .@QUEST_ACIDUS;
+			setquest .@QUEST_ACIDUS_WAIT;
+			baseexp += .@EXP_ACIDUS_BASE;
+			jobexp += .@EXP_ACIDUS_JOB;
+			mes "[Marigold]";
+			mes "Ótimo.";
+			mes "Volte amanhã às 4h para mais pesquisas.";
+			close;
+		}
+		else if (checkquest(.@QUEST_ACIDUS, HUNTING) == 0 || checkquest(.@QUEST_ACIDUS, HUNTING) == 1) {
+			mes "[Marigold]";
+			mes "Retorne quando completar.";
+			close;
+		}
+		else {
+			set .@accept, select("Aceitar a solicitação.:Recusar.");
+
+			if (.@accept == 1) {
+				setquest .@QUEST_ACIDUS;
+				mes "[Marigold]";
+				mes "Excelente!";
+				mes "Retorne quando completar.";
+				close;
+			} else {
+				mes "[Marigold]";
+				mes "Ah, que pena. Se mudar de ideia, volte quando quiser.";
+				close;
+			}
+		}
+	}
+	else if (.@menu == 4) {
+		// Opção 4: Contra a Providência
+		mes "[Folclorista Marigold]";
+		mes "Gostaria de saber que tipo de poder está atuando no 4º andar da Caverna do Abismo.";
+		mes "Lá embaixo, Ferus e Acidus mortos, que só têm ossos restantes, se movem como se ainda estivessem vivos.";
+		next;
+
+		if (checkquest(.@QUEST_BONE_WAIT) > 0) {
+			mes "[Marigold]";
+			mes "Ainda estou estudando as informações que você trousse, volte as 04:00 da manhã.";
+			close;
+		}
+		else if (checkquest(.@QUEST_BONE, HUNTING) == 2) {
+			completequest .@QUEST_BONE;
+			setquest .@QUEST_BONE_WAIT;
+			baseexp += .@EXP_BONE_BASE;
+			jobexp += .@EXP_BONE_JOB;
+			mes "[Marigold]";
+			mes "Ótimo.";
+			mes "Volte amanhã às 4h para mais pesquisas.";
+			close;
+		}
+		else if (checkquest(.@QUEST_BONE, HUNTING) == 0 || checkquest(.@QUEST_BONE, HUNTING) == 1) {
+			mes "[Marigold]";
+			mes "Você já está trabalhando nesta pesquisa. Retorne quando completar.";
+			close;
+		}
+		else {
+			set .@accept, select("Aceitar a solicitação.:Recusar.");
+
+			if (.@accept == 1) {
+				setquest .@QUEST_BONE;
+				mes "[Marigold]";
+				mes "Retorne quando completar.";
+				close;
+			} else {
+				mes "[Marigold]";
+				mes "Ah, que pena. Se mudar de ideia, volte quando quiser.";
+				close;
+			}
+		}
+	}
+	else if (.@menu == 5) {
+		// Opção 5: O que você estuda?
+		mes "[Folclorista Marigold]";
+		mes "Eu estudo as criaturas do Lago do Abismo.";
+		mes "Ferus, Acidus, Mímicos...";
+		close;
+	}
+}
+
+
+// =====================================================================
+// 2. NPC: Rúbia - Forjadora Dracônica
+// =====================================================================
+hu_in01,95,322,4	Script	Rúbia	124,{
+	// Item IDs - Materials
+	set .@Drabone_L, 25765;
+	set .@Drabone_S, 25766;
+	set .@Dragon_Canine, 1035;
+	set .@Dragon_Scale, 1036;
+	set .@Dragon_Train, 1037;
+	set .@Dragons_Skin, 7123;
+	set .@Dragonball_Green, 7445;
+	set .@Dragonball_Blue, 7446;
+	set .@Dragonball_Red, 7447;
+	set .@Dragonball_Yellow, 7448;
+
+	// Item IDs - Dragon Spheres
+	set .@Dragenergy_Red, 25761;
+	set .@Dragenergy_Green, 25759;
+	set .@Dragenergy_Gold, 25762;
+	set .@Dragenergy_Purple, 25763;
+	set .@Dragenergy_Blue, 25760;
+	set .@Dragenergy_Silver, 25764;
+
+	// Item IDs - Equipment
+	set .@DragonA_Red, 15391;
+	set .@DragonA_Green, 15392;
+	set .@DragonA_Gold, 15393;
+	set .@DragonA_Purple, 15394;
+	set .@DragonA_Blue, 15395;
+	set .@DragonA_Silver, 15396;
+	set .@Drag_Manteau, 20946;
+	set .@Dragon_Boots, 22208;
+
+	// Initial dialogue
+	mes "[Rúbia]";
+	mes "Você tem um cheiro diferente de quem costuma enfrentar o abismo.";
+	mes "Foi você quem permitiu que os arrogantes estivessem lá.";
+	next;
+
+	mes "[Rúbia]";
+	mes "Você conseguiu bastante material de dragão, não é?";
+	mes "Que tal fazer um acordo comigo?";
+	next;
+
+	// Main menu
+	set .@menu, select("Legal!:O que você faz?:O que você precisa?:Não tenho interesse.");
+
+	if (.@menu == 1) {
+		mes "[Rúbia]";
+		mes "\"Legal\"? Haha... Vejo que você não tem a menor idéia do calor sufocante e do perigo real que te espera nas profundezas daquela caverna.";
+		mes "Mas já que sobreviveu até aqui, vamos ver se a sua audácia acompanha a sua força.";
+		close;
+	}
+	else if (.@menu == 2) {
+		mes "[Rúbia]";
+		mes "Uso os materiais obtidos dos monstros das profundezas do Lago do Abismo para forjar equipamentos com o poder dos Dragões.";
+		mes "Sobre qual peça você quer saber os materiais?";
+		next;
+
+		set .@submenu, select("Cota Dracônica:Capa Dracônica:Bota Dracônica");
+
+		if (.@submenu == 1) {
+			mes "[Rúbia]";
+			mes "Qual Cota Dracônica você quer consultar?";
+			next;
+
+			set .@cota_color, select("Cota Dracônica Rubra:Cota Dracônica Verde:Cota Dracônica Ouro:Cota Dracônica Roxa:Cota Dracônica Azul:Cota Dracônica Prata");
+
+			if (.@cota_color == 1) { set .@sphere, .@Dragenergy_Red; set .@target, .@DragonA_Red; }
+			else if (.@cota_color == 2) { set .@sphere, .@Dragenergy_Green; set .@target, .@DragonA_Green; }
+			else if (.@cota_color == 3) { set .@sphere, .@Dragenergy_Gold; set .@target, .@DragonA_Gold; }
+			else if (.@cota_color == 4) { set .@sphere, .@Dragenergy_Purple; set .@target, .@DragonA_Purple; }
+			else if (.@cota_color == 5) { set .@sphere, .@Dragenergy_Blue; set .@target, .@DragonA_Blue; }
+			else if (.@cota_color == 6) { set .@sphere, .@Dragenergy_Silver; set .@target, .@DragonA_Silver; }
+
+			mes "[Rúbia]";
+			mes "Para forjar a " + mesitemlink(.@target) + ", você precisará de:";
+			next;
+			mes "50x " + mesitemlink(.@sphere);
+			mes "3x " + mesitemlink(.@Drabone_L);
+			mes "15x " + mesitemlink(.@Drabone_S);
+			mes "75x " + mesitemlink(.@Dragon_Canine);
+			mes "100x " + mesitemlink(.@Dragon_Scale);
+			mes "50x " + mesitemlink(.@Dragon_Train);
+			mes "100x " + mesitemlink(.@Dragons_Skin);
+			mes "35x " + mesitemlink(.@Dragonball_Green);
+			mes "35x " + mesitemlink(.@Dragonball_Blue);
+			mes "35x " + mesitemlink(.@Dragonball_Red);
+			mes "35x " + mesitemlink(.@Dragonball_Yellow);
+			close;
+		}
+		else if (.@submenu == 2) {
+			mes "[Rúbia]";
+			mes "Para forjar a " + mesitemlink(.@Drag_Manteau) + ", você precisará de:";
+			next;
+			mes "2x " + mesitemlink(.@Drabone_L);
+			mes "6x " + mesitemlink(.@Drabone_S);
+			mes "15x " + mesitemlink(.@Dragon_Canine);
+			mes "75x " + mesitemlink(.@Dragon_Scale);
+			mes "15x " + mesitemlink(.@Dragon_Train);
+			mes "75x " + mesitemlink(.@Dragons_Skin);
+			mes "25x " + mesitemlink(.@Dragonball_Green);
+			mes "25x " + mesitemlink(.@Dragonball_Blue);
+			mes "25x " + mesitemlink(.@Dragonball_Red);
+			next;
+			mes "25x " + mesitemlink(.@Dragonball_Yellow);
+			close;
+		}
+		else if (.@submenu == 3) {
+			mes "[Rúbia]";
+			mes "Para forjar a " + mesitemlink(.@Dragon_Boots) + ", você precisará de:";
+			next;
+			mes "1x " + mesitemlink(.@Drabone_L);
+			mes "8x " + mesitemlink(.@Drabone_S);
+			mes "30x " + mesitemlink(.@Dragon_Canine);
+			mes "60x " + mesitemlink(.@Dragon_Scale);
+			mes "40x " + mesitemlink(.@Dragon_Train);
+			mes "60x " + mesitemlink(.@Dragons_Skin);
+			mes "25x " + mesitemlink(.@Dragonball_Green);
+			mes "25x " + mesitemlink(.@Dragonball_Blue);
+			mes "25x " + mesitemlink(.@Dragonball_Red);
+			next;
+			mes "25x " + mesitemlink(.@Dragonball_Yellow);
+			close;
+		}
+		close;
+	}
+	else if (.@menu == 3) {
+		mes "[Rúbia]";
+		mes "Gosto de como você pensa! O que você quer fazer?";
+		next;
+
+		set .@craft, select("Cota Dracônica.:Capa Dracônica.:Bota Dracônica.:Vou pensar sobre isso.");
+
+		if (.@craft == 1) {
+			mes "[Rúbia]";
+			mes "Você quer fazer uma Cota Dracônica.";
+			mes "Então, qual cor você gostaria?";
+			next;
+
+			set .@cota_type, select("Cota Dracônica Rubra:Cota Dracônica Verde:Cota Dracônica Ouro:Cota Dracônica Roxa:Cota Dracônica Azul:Cota Dracônica Prata");
+
+			if (.@cota_type == 1) { set .@target, .@DragonA_Red; set .@sphere, .@Dragenergy_Red; }
+			else if (.@cota_type == 2) { set .@target, .@DragonA_Green; set .@sphere, .@Dragenergy_Green; }
+			else if (.@cota_type == 3) { set .@target, .@DragonA_Gold; set .@sphere, .@Dragenergy_Gold; }
+			else if (.@cota_type == 4) { set .@target, .@DragonA_Purple; set .@sphere, .@Dragenergy_Purple; }
+			else if (.@cota_type == 5) { set .@target, .@DragonA_Blue; set .@sphere, .@Dragenergy_Blue; }
+			else if (.@cota_type == 6) { set .@target, .@DragonA_Silver; set .@sphere, .@Dragenergy_Silver; }
+
+			mes "[Rúbia]";
+			mes "Deixe-me conferir seus materiais.";
+			next;
+
+			if (countitem(.@sphere) >= 50 && countitem(.@Drabone_L) >= 3 && countitem(.@Drabone_S) >= 15 &&
+			    countitem(.@Dragon_Canine) >= 75 && countitem(.@Dragon_Scale) >= 100 && countitem(.@Dragon_Train) >= 50 &&
+			    countitem(.@Dragons_Skin) >= 100 && countitem(.@Dragonball_Green) >= 35 && countitem(.@Dragonball_Blue) >= 35 &&
+			    countitem(.@Dragonball_Red) >= 35 && countitem(.@Dragonball_Yellow) >= 35) {
+
+				delitem .@sphere, 50;
+				delitem .@Drabone_L, 3;
+				delitem .@Drabone_S, 15;
+				delitem .@Dragon_Canine, 75;
+				delitem .@Dragon_Scale, 100;
+				delitem .@Dragon_Train, 50;
+				delitem .@Dragons_Skin, 100;
+				delitem .@Dragonball_Green, 35;
+				delitem .@Dragonball_Blue, 35;
+				delitem .@Dragonball_Red, 35;
+				delitem .@Dragonball_Yellow, 35;
+
+				mes "[Rúbia]";
+				mes "Pronto!";
+				getitem .@target, 1;
+				next;
+				mes "[Rúbia]";
+				mes "Sua " + mesitemlink(.@target) + " está pronta!";
+				close;
+			} else {
+				mes "[Rúbia]";
+				mes "Você não tem todos os materiais necessários.";
+				close;
+			}
+		}
+		else if (.@craft == 2) {
+			mes "[Rúbia]";
+			mes "Você quer fazer uma " + mesitemlink(.@Drag_Manteau) + ".";
+			next;
+
+			if (countitem(.@Drabone_L) >= 2 && countitem(.@Drabone_S) >= 6 && countitem(.@Dragon_Canine) >= 15 &&
+			    countitem(.@Dragon_Scale) >= 75 && countitem(.@Dragon_Train) >= 15 && countitem(.@Dragons_Skin) >= 75 &&
+			    countitem(.@Dragonball_Green) >= 25 && countitem(.@Dragonball_Blue) >= 25 &&
+			    countitem(.@Dragonball_Red) >= 25 && countitem(.@Dragonball_Yellow) >= 25) {
+
+				delitem .@Drabone_L, 2;
+				delitem .@Drabone_S, 6;
+				delitem .@Dragon_Canine, 15;
+				delitem .@Dragon_Scale, 75;
+				delitem .@Dragon_Train, 15;
+				delitem .@Dragons_Skin, 75;
+				delitem .@Dragonball_Green, 25;
+				delitem .@Dragonball_Blue, 25;
+				delitem .@Dragonball_Red, 25;
+				delitem .@Dragonball_Yellow, 25;
+
+				mes "[Rúbia]";
+				mes "Pronto!";
+				getitem .@Drag_Manteau, 1;
+				next;
+				mes "[Rúbia]";
+				mes "Sua " + mesitemlink(.@Drag_Manteau) + " está pronta!";
+				close;
+			} else {
+				mes "[Rúbia]";
+				mes "Você não tem todos os materiais necessários.";
+				close;
+			}
+		}
+		else if (.@craft == 3) {
+			mes "[Rúbia]";
+			mes "Você quer fazer uma " + mesitemlink(.@Dragon_Boots) + ".";
+			next;
+
+			if (countitem(.@Drabone_L) >= 1 && countitem(.@Drabone_S) >= 8 && countitem(.@Dragon_Canine) >= 30 &&
+			    countitem(.@Dragon_Scale) >= 60 && countitem(.@Dragon_Train) >= 40 && countitem(.@Dragons_Skin) >= 60 &&
+			    countitem(.@Dragonball_Green) >= 25 && countitem(.@Dragonball_Blue) >= 25 &&
+			    countitem(.@Dragonball_Red) >= 25 && countitem(.@Dragonball_Yellow) >= 25) {
+
+				delitem .@Drabone_L, 1;
+				delitem .@Drabone_S, 8;
+				delitem .@Dragon_Canine, 30;
+				delitem .@Dragon_Scale, 60;
+				delitem .@Dragon_Train, 40;
+				delitem .@Dragons_Skin, 60;
+				delitem .@Dragonball_Green, 25;
+				delitem .@Dragonball_Blue, 25;
+				delitem .@Dragonball_Red, 25;
+				delitem .@Dragonball_Yellow, 25;
+
+				mes "[Rúbia]";
+				mes "Pronto!";
+				getitem .@Dragon_Boots, 1;
+				next;
+				mes "[Rúbia]";
+				mes "Sua " + mesitemlink(.@Dragon_Boots) + " está pronta!";
+				close;
+			} else {
+				mes "[Rúbia]";
+				mes "Você não tem todos os materiais necessários.";
+				close;
+			}
+		}
+		else if (.@craft == 4) {
+			mes "[Rúbia]";
+			mes "Pense bem, o poder dos dragões não é para qualquer um.";
+			close;
+		}
+		close;
+	}
+	else if (.@menu == 4) {
+		mes "[Rúbia]";
+		mes "Como quiser... mas você vai perder a chance de ter equipamentos poderosos.";
+		close;
+	}
+}
+
+
+// =====================================================================
+// 3. NPC: Cerúlio - Complementos Dracônicos
+// =====================================================================
+hu_in01,93,322,4	Script	Cerúlio	125,{
+	// Item IDs - Materials
+	set .@Drabone_L, 25765;
+	set .@Drabone_S, 25766;
+
+	// Item IDs - Dragon Spheres
+	set .@Dragenergy_Red, 25761;
+	set .@Dragenergy_Green, 25759;
+	set .@Dragenergy_Gold, 25762;
+	set .@Dragenergy_Purple, 25763;
+	set .@Dragenergy_Blue, 25760;
+	set .@Dragenergy_Silver, 25764;
+
+	// Item IDs - Complementos
+	set .@Abyss_Ddbox, 23981;
+	set .@Abyss_Ddbox3, 100144;
+	set .@Abyss_Ddbox4, 100145;
+
+	// Initial dialogue
+	mes "[Cerúlio]";
+	mes "Você tem algum equipamento imbuído com o poder dos dragões?";
+	mes "Pode ser que você não tenha um agora. Mas conseguirá algum dia.";
+	next;
+
+	mes "[Cerúlio]";
+	mes "Se você me trouxer o que eu preciso do Lago do Abismo, te darei um gostinho do poder dos dragões.";
+	mes "Um complemento muito especial para os seus equipamentos.";
+	next;
+
+	mes "[Cerúlio]";
+	mes "O que me diz?";
+	next;
+
+	// Main menu
+	set .@menu, select("Legal! Quero o complemento!:O que você precisa?:Para que posso usá-lo?:Não tenho interesse.");
+
+	if (.@menu == 1) {
+		mes "[Cerúlio]";
+		mes "Que tipo de complemento você gostaria de obter?";
+		next;
+
+		set .@craft_type, select("Turbulência do Dragão:Poder do Dragão:Força do Dragão");
+
+		if (.@craft_type == 1) {
+			set .@target, .@Abyss_Ddbox;
+			set .@ossos_demanda, 5;
+			set .@esferas_qtd, 12;
+		}
+		else if (.@craft_type == 2) {
+			set .@target, .@Abyss_Ddbox3;
+			set .@ossos_demanda, 2;
+			set .@esferas_qtd, 8;
+		}
+		else if (.@craft_type == 3) {
+			set .@target, .@Abyss_Ddbox4;
+			set .@ossos_demanda, 1;
+			set .@esferas_qtd, 7;
+		}
+
+		mes "[Cerúlio]";
+		mes "Você quer obter o " + mesitemlink(.@target) + "?";
+		mes "Então, o que gostaria de trocar por ele?";
+		next;
+
+		if (countitem(.@Drabone_L) >= 1 && countitem(.@Drabone_S) >= .@ossos_demanda) {
+			set .@has_ossos, 1;
+			set .@opt1$, "Ossos de Dragão";
+		} else {
+			set .@has_ossos, 0;
+			set .@opt1$, "Ossos de Dragão (Itens Insuficientes)";
+		}
+
+		set .@esq_g, countitem(.@Dragenergy_Green);
+		set .@esq_b, countitem(.@Dragenergy_Blue);
+		set .@esq_r, countitem(.@Dragenergy_Red);
+		set .@esq_go, countitem(.@Dragenergy_Gold);
+		set .@esq_p, countitem(.@Dragenergy_Purple);
+		set .@esq_s, countitem(.@Dragenergy_Silver);
+
+		if (.@esq_g >= .@esferas_qtd && .@esq_b >= .@esferas_qtd && .@esq_r >= .@esferas_qtd && .@esq_go >= .@esferas_qtd && .@esq_p >= .@esferas_qtd && .@esq_s >= .@esferas_qtd) {
+			set .@has_esferas, 1;
+			set .@opt2$, "Esferas de Dragão";
+		} else {
+			set .@has_esferas, 0;
+			set .@opt2$, "Esferas de Dragão (Itens Insuficientes)";
+		}
+
+		set .@material_opt, select(.@opt1$ + ":" + .@opt2$ + ":Deixe-me pensar sobre isso.");
+
+		if (.@material_opt == 1) {
+			if (.@has_ossos) {
+				mes "[Cerúlio]";
+				mes "Deixe-me conferir seus materiais.";
+				next;
+
+				delitem .@Drabone_L, 1;
+				delitem .@Drabone_S, .@ossos_demanda;
+
+				mes "[Cerúlio]";
+				mes "Aqui está!";
+				getitem .@target, 1;
+				next;
+				mes "[Cerúlio]";
+				mes "Seu " + mesitemlink(.@target) + " está pronto!";
+				close;
+			} else {
+				mes "[Cerúlio]";
+				mes "Você não tem todos os materiais necessários.";
+				close;
+			}
+		}
+		else if (.@material_opt == 2) {
+			if (.@has_esferas) {
+				mes "[Cerúlio]";
+				mes "Deixe-me conferir seus materiais.";
+				next;
+
+				delitem .@Dragenergy_Green, .@esferas_qtd;
+				delitem .@Dragenergy_Blue, .@esferas_qtd;
+				delitem .@Dragenergy_Red, .@esferas_qtd;
+				delitem .@Dragenergy_Gold, .@esferas_qtd;
+				delitem .@Dragenergy_Purple, .@esferas_qtd;
+				delitem .@Dragenergy_Silver, .@esferas_qtd;
+
+				mes "[Cerúlio]";
+				mes "Aqui está!";
+				getitem .@target, 1;
+				next;
+				mes "[Cerúlio]";
+				mes "Seu " + mesitemlink(.@target) + " está pronto!";
+				close;
+			} else {
+				mes "[Cerúlio]";
+				mes "Você não tem todos os materiais necessários.";
+				close;
+			}
+		}
+		else if (.@material_opt == 3) {
+			mes "[Cerúlio]";
+			mes "Pense bem, o poder dos dragões não é para qualquer um.";
+			close;
+		}
+		close;
+	}
+	else if (.@menu == 2) {
+		mes "[Cerúlio]";
+		mes "Que tipo de complemento você gostaria de saber os materiais?";
+		next;
+
+		set .@info, select("Turbulência do Dragão:Poder do Dragão:Força do Dragão:Voltar.");
+
+		if (.@info == 1) {
+			mes "[Cerúlio]";
+			mes "Para fazer a " + mesitemlink(.@Abyss_Ddbox) + ", você pode escolher entre:";
+			next;
+
+			mes "[Cerúlio]";
+			mes "^FF0000Opção de Ossos:^000000";
+			mes "1x " + mesitemlink(.@Drabone_L) + ",";
+			mes "5x " + mesitemlink(.@Drabone_S) + ".";
+			next;
+
+			mes "[Cerúlio]";
+			mes "^FF0000Ou Opção de Esferas:^000000";
+			mes "12x " + mesitemlink(.@Dragenergy_Green) + ",";
+			mes "12x " + mesitemlink(.@Dragenergy_Blue) + ",";
+			mes "12x " + mesitemlink(.@Dragenergy_Red);
+			mes "12x " + mesitemlink(.@Dragenergy_Gold) + ",";
+			mes "12x " + mesitemlink(.@Dragenergy_Purple) + ",";
+			mes "12x " + mesitemlink(.@Dragenergy_Silver);
+			close;
+		}
+		else if (.@info == 2) {
+			mes "[Cerúlio]";
+			mes "Para fazer o " + mesitemlink(.@Abyss_Ddbox3) + ", você pode escolher entre:";
+			next;
+
+			mes "[Cerúlio]";
+			mes "^FF0000Opção de Ossos:^000000";
+			mes "1x " + mesitemlink(.@Drabone_L) + ",";
+			mes "2x " + mesitemlink(.@Drabone_S) + ".";
+			next;
+
+			mes "[Cerúlio]";
+			mes "^FF0000Ou Opção de Esferas:^000000";
+			mes "8x " + mesitemlink(.@Dragenergy_Green) + ",";
+			mes "8x " + mesitemlink(.@Dragenergy_Blue) + ",";
+			mes "8x " + mesitemlink(.@Dragenergy_Red);
+			mes "8x " + mesitemlink(.@Dragenergy_Gold) + ",";
+			mes "8x " + mesitemlink(.@Dragenergy_Purple) + ",";
+			mes "8x " + mesitemlink(.@Dragenergy_Silver);
+			close;
+		}
+		else if (.@info == 3) {
+			mes "[Cerúlio]";
+			mes "Para fazer a " + mesitemlink(.@Abyss_Ddbox4) + ", você pode escolher entre:";
+			next;
+
+			mes "[Cerúlio]";
+			mes "^FF0000Opção de Ossos:^000000";
+			mes "1x " + mesitemlink(.@Drabone_L) + ",";
+			mes "1x " + mesitemlink(.@Drabone_S) + ".";
+			next;
+
+			mes "[Cerúlio]";
+			mes "^FF0000Ou Opção de Esferas:^000000";
+			mes "7x " + mesitemlink(.@Dragenergy_Green) + ",";
+			mes "7x " + mesitemlink(.@Dragenergy_Blue) + ",";
+			mes "7x " + mesitemlink(.@Dragenergy_Red);
+			mes "7x " + mesitemlink(.@Dragenergy_Gold) + ",";
+			mes "7x " + mesitemlink(.@Dragenergy_Purple) + ",";
+			mes "7x " + mesitemlink(.@Dragenergy_Silver);
+			close;
+		}
+		close;
+	}
+	else if (.@menu == 3) {
+		mes "[Cerúlio]";
+		mes "É possível adicionar mais poder dos dragões aos equipamentos compatíveis!";
+		close;
+	}
+	else if (.@menu == 4) {
+		mes "[Cerúlio]";
+		mes "Como quiser... mas você vai perder a chance de ter equipamentos ainda mais poderosos.";
+		close;
+	}
+}
+
+
+// =====================================================================
+// 4. Teleportes: Abyss_03 <-> Abyss_04
+// =====================================================================
+
+// Placa de Aviso (Descida de abyss_03 para abyss_04)
+abyss_03,91,110,3	script	Aviso#abyss03_down	837,{
+	mes "[Aviso]";
+	mes "- Este é um atalho, pois dar a volta é muito cansativo. A descida é longa e perigosa. -";
+	mes "Recomendável para nível 190 ou mais.";
+	next;
+
+	switch(select("Descer pela corda!", "Melhor deixar pra lá.")) {
+		case 1:
+			close2;
+			warp "abyss_04", 169, 161;
+			end;
+
+		case 2:
+			close;
+	}
+}
+
+// Corda de Retorno (Subida de abyss_04 para abyss_03)
+abyss_04,168,166,3	script	#abyss03_up	723,{
+	mes "Você vê uma corda:";
+	next;
+
+	switch(select("Subir pela corda!", "Melhor deixar pra lá.")) {
+		case 1:
+			close2;
+			warp "abyss_03", 87, 107;
+			end;
+
+		case 2:
+			close;
+	}
+}

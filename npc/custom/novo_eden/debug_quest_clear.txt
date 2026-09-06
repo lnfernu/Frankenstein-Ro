@@ -1,0 +1,34 @@
+moc_para01,52,38,3	script	[DEBUG] Limpar Quests Eden	111,{
+	mes "[DEBUG - Gerenciar Quests do Eden]";
+	next;
+	
+	switch(select("Remover uma quest específica (por ID):Resetar TODAS as quests do personagem (Instantâneo):Sair")) {
+		case 1:
+			mes "Digite o ID da quest que deseja remover:";
+			next;
+			input .@quest_id;
+			
+			if (.@quest_id <= 0) {
+				mes "ID inválido!";
+				close;
+			}
+			
+			erasequest .@quest_id;
+			mes "A quest com o ID " + .@quest_id + " foi removida com sucesso!";
+			close;
+			
+		case 2:
+			mes "Tem certeza que quer remover **TODAS** as quests do seu personagem instantaneamente?";
+			next;
+			if (select("Sim:Não") == 1) {
+				// Deleta direto na tabela do banco de dados do personagem atual
+				query_sql("DELETE FROM `char_quests` WHERE `char_id` = " + getcharid(0));
+				mes "Todas as quests do personagem foram limpas com sucesso!";
+				close;
+			}
+			close;
+			
+		case 3:
+			close;
+	}
+}

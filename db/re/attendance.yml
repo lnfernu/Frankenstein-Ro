@@ -35,7 +35,7 @@ Header:
 
 Body:
   - Start: 20260731
-    End: 20260828
+    End: 20280828
     Rewards:
       - Day: 1
         ItemId: 25464
