@@ -245,6 +245,8 @@ Some NPC and script translations were based on the project:
 - Author: NYD-DARK
 - Repository:
   https://github.com/NYD-DARK/NPC-PTBR
+- Novo Eden adicionado e client usado no projeto:
+  https://rathena.org/board/topic/149586-portable-server-br/
 
 The translations were adapted and integrated into Frankenstein RO, with compatibility adjustments for the current rAthena version.
 
